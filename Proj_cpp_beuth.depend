@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1460320717 source:/home/alien/codeblocks_projects/proj_beuth_cpp/main.cpp
+	<iostream>
+	"tdate.h"
+	"ttime.h"
+	"tscore.h"
+
+1460319313 /home/alien/codeblocks_projects/proj_beuth_cpp/tdate.h
+
+1460319313 /home/alien/codeblocks_projects/proj_beuth_cpp/ttime.h
+
+1460322446 /home/alien/codeblocks_projects/proj_beuth_cpp/tscore.h
+
+1460299082 source:/home/alien/codeblocks_projects/proj_beuth_cpp/tdate.cpp
+	<ctime>
+	<stdio.h>
+	"tdate.h"
+
+1460323148 source:/home/alien/codeblocks_projects/proj_beuth_cpp/tscore.cpp
+	<stdio.h>
+	"tscore.h"
+
+1460299274 source:/home/alien/codeblocks_projects/proj_beuth_cpp/ttime.cpp
+	<ctime>
+	<stdio.h>
+	"ttime.h"
+
