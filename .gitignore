@@ -26,9 +26,5 @@
 *.exe
 *.out
 *.app
-
-# Codeblocks files
-*.depend
-*.layout
 **/bin/Debug/
 **/bin/Release/
