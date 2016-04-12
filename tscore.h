@@ -22,7 +22,6 @@
         public:
             TScore();
             TScore(int goalsHome, int goalsGuest);
-            ~TScore();
             void setGoals(int goalsHome, int goalsGuest);
             int  getPointsHome();
             int  getPointsGuest();

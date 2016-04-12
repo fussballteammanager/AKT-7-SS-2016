@@ -1,6 +1,6 @@
-/******************************************************
+﻿/******************************************************
  ******************************************************
- *** PROGRAMM: Cpp �bung
+ *** PROGRAMM: Cpp Übung
  *** MODUL: main.cpp
  *** VERSION: 1
  *** BESCHREIBUNG: Cpp class exercises
@@ -10,10 +10,15 @@
  *** ERSTELLT VON: ts
  *** DATUM BEGINN: 11.04.2016
  ***         ENDE: 12.04.2016
- *** �NDERUNGEN  : -
+ *** ÄNDERUNGEN  : -
  ******************************************************
  ******************************************************/
 
+/*
+umlaute in hex:
+Ä xC4,Ö xD6,Ü xDC,
+ä xE4,ö xF6,ü xFC,
+*/
 #include <iostream>
 
 using namespace std;
@@ -28,22 +33,28 @@ int main()
    TTime T1, T2(14, 15);
    TScore S1, S2(4, 2);
 
-   cout << "\nKlasse TDate:" << endl;
-   cout << "Standardkonstruktor Heutiges Datum D1:     ";   D1.print();   cout << endl;
-   cout << "Konstruktor         Ostersonntag (D2):     ";   D2.print();   cout << endl;
+    cout << "\nKlasse TDate:";
+    cout << "\nStandardkonstruktor Heutiges Datum D1:     ";
+    D1.print();
+    cout << "\nKonstruktor         Ostersonntag (D2):     ";
+    D2.print();
+    cout << "\n\nKlasse TTime:";
+    cout << "\nStandardkonstruktor Aktuelle Uhrzeit T1:   ";
+    T1.print();
+    cout << "\nKonstruktor         Vorlesungsbeginn (T2): ";
+    T2.print();
 
-   cout << "\nKlasse TTime:" << endl;
-   cout << "Standardkonstruktor Aktuelle Uhrzeit T1:   ";   T1.print();   cout << endl;
-   cout << "Konstruktor         Vorlesungsbeginn (T2): ";   T2.print();   cout << endl;
+    cout << "\n\nKlasse TScore:";
+    cout << "\nStandardkonstruktor 0:0 S1:                ";
+    S1.print();
+    cout << "\nKonstruktor         4:2 (S2):              ";
+    S2.print();
 
-   cout << "\nKlasse TScore:" << endl;
-   cout << "Standardkonstruktor 0:0 S1:                ";   S1.print();   cout << endl;
-   cout << "Konstruktor         4:2 (S2):              ";   S2.print();   cout << endl;
-
-   cout << "\nPunkte f�r den Torstand S1 (";   S1.print();
-   cout << ")           " << S1.getPointsHome() << ":" << S1.getPointsGuest() << endl;
-   cout << "Punkte f�r den Torstand S2 (";   S2.print();
-   cout << ")           " << S2.getPointsHome() << ":" << S2.getPointsGuest() << endl;
+    cout << "\n\nPunkte fuer den Torstand S1 (";
+    S1.print();
+    cout << ")           " << S1.getPointsHome() << ":" << S1.getPointsGuest();
+    cout << "\nPunkte fuer den Torstand S2 (";   S2.print();
+    cout << ")           " << S2.getPointsHome() << ":" << S2.getPointsGuest() << "\n";
 
    return 0;
 }

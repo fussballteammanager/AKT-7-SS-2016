@@ -1,8 +1,6 @@
-#include<ctime>
-//#include<iostream>
-#include<stdio.h>
-
-#include"ttime.h"
+#include <iostream>
+#include "ttime.h"
+#include <ctime>
 
 using namespace std;
 
@@ -14,11 +12,6 @@ TTime::TTime()
 TTime::TTime(int hour, int minute)
 {
     TTime::setTime(hour, minute);
-}
-
-TTime::~TTime()
-{
-    printf( "Object TTime is freed\n" );
 }
 
 void TTime::setTime(int hour, int minute)
@@ -54,5 +47,6 @@ int TTime::getMinute()
 
 void TTime::print()
 {
-    printf( "%2i:%2i",TTime::hour, TTime::minute);
+    //printf( "%2i:%2i",TTime::hour, TTime::minute);
+    cout << this->hour << ":" << this->minute;
 }

@@ -23,7 +23,6 @@
         public:
             TDate();
             TDate(int day, int month, int year);
-            ~TDate();
             void setDate(int day, int month, int year);
             /* set date of today */
             void setCurrentDate();

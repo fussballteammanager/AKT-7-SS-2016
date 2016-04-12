@@ -1,12 +1,10 @@
-//#include<iostream>
-#include<stdio.h>
-
-#include"tscore.h"
+#include <iostream>
+#include "tscore.h"
 
 using namespace std;
 
 
-static void setDefault( void );
+//static void setDefault( void );
 
 TScore::TScore()
 {
@@ -16,11 +14,6 @@ TScore::TScore()
 TScore::TScore(int goalsHome, int goalsGuest)
 {
     TScore::setGoals(goalsHome, goalsGuest);
-}
-
-TScore::~TScore()
-{
-    printf( "Object TScore is freed\n" );
 }
 
 void TScore::setGoals(int goalsHome, int goalsGuest)
@@ -59,5 +52,5 @@ int TScore::getPointsGuest()
 
 void TScore::print()
 {
-    printf( "%i:%i",TScore::goalsHome, TScore::goalsGuest);
+    cout << this->goalsHome << ":" << this->goalsGuest;
 }

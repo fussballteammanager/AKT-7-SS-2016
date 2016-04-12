@@ -23,7 +23,6 @@
         public:
             TTime();
             TTime(int hour, int minute);
-            ~TTime();
             void setTime(int hour, int minute);
             int getHour();
             int getMinute();

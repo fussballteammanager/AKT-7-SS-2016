@@ -1,8 +1,6 @@
-#include<ctime>
-//#include<iostream>
-#include<stdio.h>
-
-#include"tdate.h"
+#include <iostream>
+#include "tdate.h"
+#include <ctime>
 
 using namespace std;
 
@@ -14,11 +12,6 @@ TDate::TDate()
 TDate::TDate(int day, int month, int year)
 {
     TDate::setDate(day, month, year);
-}
-
-TDate::~TDate()
-{
-    printf( "Object TDate is freed\n" );
 }
 
 void TDate::setDate(int day, int month, int year)
@@ -62,5 +55,5 @@ int TDate::getYear()
 
 void TDate::print()
 {
-    printf( "%02i.%02i.%04i",TDate::day, TDate::month, TDate::year);
+    cout << this->day << "." << this->month << "." << this->year;
 }

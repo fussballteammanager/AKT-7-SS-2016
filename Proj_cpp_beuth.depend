@@ -25,3 +25,29 @@
 	<stdio.h>
 	"ttime.h"
 
+1460483356 source:c:\users\julian\git clone\akt-7-ss-2016\main.cpp
+	<iostream>
+	"tdate.h"
+	"ttime.h"
+	"tscore.h"
+
+1460482510 c:\users\julian\git clone\akt-7-ss-2016\tdate.h
+
+1460482510 c:\users\julian\git clone\akt-7-ss-2016\ttime.h
+
+1460482510 c:\users\julian\git clone\akt-7-ss-2016\tscore.h
+
+1460483461 source:c:\users\julian\git clone\akt-7-ss-2016\tdate.cpp
+	<iostream>
+	"tdate.h"
+	<ctime>
+
+1460483461 source:c:\users\julian\git clone\akt-7-ss-2016\ttime.cpp
+	<iostream>
+	"ttime.h"
+	<ctime>
+
+1460483483 source:c:\users\julian\git clone\akt-7-ss-2016\tscore.cpp
+	<iostream>
+	"tscore.h"
+
