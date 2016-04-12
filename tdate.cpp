@@ -1,6 +1,7 @@
 #include <iostream>
-#include "tdate.h"
+#include <iomanip>
 #include <ctime>
+#include "tdate.h"
 
 using namespace std;
 
@@ -55,5 +56,6 @@ int TDate::getYear()
 
 void TDate::print()
 {
-    cout << this->day << "." << this->month << "." << this->year;
+    cout << setw(2) << setfill('0') << this->day << "."
+        << setw(2) << setfill('0') <<  this->month << "." << this->year;
 }

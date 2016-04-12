@@ -4,8 +4,6 @@
 using namespace std;
 
 
-//static void setDefault( void );
-
 TScore::TScore()
 {
     TScore::setGoals(0, 0);

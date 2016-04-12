@@ -20,12 +20,11 @@ umlaute in hex:
 ä xE4,ö xF6,ü xFC,
 */
 #include <iostream>
-
-using namespace std;
-
 #include "tdate.h"
 #include "ttime.h"
 #include "tscore.h"
+
+using namespace std;
 
 int main()
 {

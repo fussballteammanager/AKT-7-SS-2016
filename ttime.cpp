@@ -1,6 +1,7 @@
 #include <iostream>
-#include "ttime.h"
+#include <iomanip>
 #include <ctime>
+#include "ttime.h"
 
 using namespace std;
 
@@ -47,6 +48,6 @@ int TTime::getMinute()
 
 void TTime::print()
 {
-    //printf( "%2i:%2i",TTime::hour, TTime::minute);
-    cout << this->hour << ":" << this->minute;
+    cout << setw(2) << setfill('0') << this->hour << ":"
+        << setw(2) << setfill('0') << this->minute;
 }
