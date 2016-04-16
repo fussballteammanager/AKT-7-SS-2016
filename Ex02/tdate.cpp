@@ -1,7 +1,11 @@
 #include <iostream>
 #include <iomanip>
 #include <ctime>
-#include "tdate.h"
+#include "TDate.h"
+#include "TTime.h"
+#include "TScore.h"
+#include "TPlayer.h"
+#include "TTeam.h"
 
 using namespace std;
 
@@ -10,12 +14,12 @@ TDate::TDate()
     TDate::setCurrentDate();
 }
 
-TDate::TDate(short day, short month, short year)
+TDate::TDate(int day, int month, int year)
 {
     TDate::setDate(day, month, year);
 }
 
-void TDate::setDate(short day, short month, short year)
+void TDate::setDate(int day, int month, int year)
 {
     if ( day > 0 and day <=31 and month > 0 and month <=12 and
         year > 1900 and year < 3000 )
@@ -39,17 +43,17 @@ void TDate::setCurrentDate()
     TDate::year = 1900 + ltm->tm_year;
 }
 
-short TDate::getDay()
+int TDate::getDay()
 {
     return TDate::day;
 }
 
-short TDate::getMonth()
+int TDate::getMonth()
 {
     return TDate::month;
 }
 
-short  TDate::getYear()
+int TDate::getYear()
 {
     return TDate::year;
 }

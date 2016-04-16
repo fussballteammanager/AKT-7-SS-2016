@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1460823789 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\main.cpp
+	"TDate.h"
+	"TTime.h"
+	"TScore.h"
+	"TPlayer.h"
+	"TTeam.h"
+
+1460809871 c:\users\julian\git clone\akt-7-ss-2016\ex02\tdate.h
+
+1460809871 c:\users\julian\git clone\akt-7-ss-2016\ex02\ttime.h
+
+1460809871 c:\users\julian\git clone\akt-7-ss-2016\ex02\tscore.h
+
+1460824853 c:\users\julian\git clone\akt-7-ss-2016\ex02\tplayer.h
+
+1460809871 c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.h
+
+1460810024 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tdate.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"TDate.h"
+	"TTime.h"
+	"TScore.h"
+	"TPlayer.h"
+	"TTeam.h"
+
+1460824981 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tplayer.cpp
+	<iostream>
+	"TDate.h"
+	"TTime.h"
+	"TScore.h"
+	"TPlayer.h"
+	"TTeam.h"
+
+1460810024 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tscore.cpp
+	<iostream>
+	"TDate.h"
+	"TTime.h"
+	"TScore.h"
+	"TPlayer.h"
+	"TTeam.h"
+
+1460810024 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.cpp
+	<iostream>
+	"TDate.h"
+	"TTime.h"
+	"TScore.h"
+	"TPlayer.h"
+	"TTeam.h"
+
+1460810024 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\ttime.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"TDate.h"
+	"TTime.h"
+	"TScore.h"
+	"TPlayer.h"
+	"TTeam.h"
+

@@ -10,25 +10,26 @@
  * ÄNDERUNGEN  : -
  ******************************************************/
 
-#ifndef tdate_h
-    #define tdate_h tdate_h
+#ifndef TDATE_H
+    #define TDATE_H TDATE_H
+    using namespace std;
 
     class TDate
     {
         private:
-            short day;
-            short month;
-            short year;
+            int day;
+            int month;
+            int year;
 
         public:
             TDate();
-            TDate(short day, short month, short year);
-            void setDate(short day, short month, short year);
+            TDate(int day, int month, int year);
+            void setDate(int day, int month, int year);
             /* set date of today */
             void setCurrentDate();
-            short getDay();
-            short getMonth();
-            short getYear();
+            int getDay();
+            int getMonth();
+            int getYear();
             /* print date */
             void print();
     };

@@ -1,7 +1,11 @@
 #include <iostream>
 #include <iomanip>
 #include <ctime>
-#include "ttime.h"
+#include "TDate.h"
+#include "TTime.h"
+#include "TScore.h"
+#include "TPlayer.h"
+#include "TTeam.h"
 
 using namespace std;
 
@@ -10,12 +14,12 @@ TTime::TTime()
     TTime::setCurrentTime();
 }
 
-TTime::TTime(short hour, short minute)
+TTime::TTime(int hour, int minute)
 {
     TTime::setTime(hour, minute);
 }
 
-void TTime::setTime(short hour, short minute)
+void TTime::setTime(int hour, int minute)
 {
     if ( hour >= 0 and hour <=23 and minute >= 0 and minute <=59 )
     {
@@ -36,12 +40,12 @@ void TTime::setCurrentTime()
     TTime::minute = ltm->tm_min;
 }
 
-short TTime::getHour()
+int TTime::getHour()
 {
     return TTime::hour;
 }
 
-short TTime::getMinute()
+int TTime::getMinute()
 {
     return TTime::minute;
 }

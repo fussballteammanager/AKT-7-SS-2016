@@ -10,21 +10,22 @@
  * ÄNDERUNGEN  : -
  ******************************************************/
 
-#ifndef tscore_h
-    #define tscore_h tscore_h
+#ifndef TSCORE_H
+    #define TSCORE_H TSCORE_H
+    using namespace std;
 
     class TScore
     {
         private:
-            short goalsHome;
-            short goalsGuest;
+            int goalsHome;
+            int goalsGuest;
 
         public:
             TScore();
-            TScore(short goalsHome, short goalsGuest);
-            void setGoals(short goalsHome, short goalsGuest);
-            short getPointsHome();
-            short getPointsGuest();
+            TScore(int goalsHome, int goalsGuest);
+            void setGoals(int goalsHome, int goalsGuest);
+            int  getPointsHome();
+            int  getPointsGuest();
             /* print goals */
             void print();
     };

@@ -1,5 +1,9 @@
 #include <iostream>
-#include "tscore.h"
+#include "TDate.h"
+#include "TTime.h"
+#include "TScore.h"
+#include "TPlayer.h"
+#include "TTeam.h"
 
 using namespace std;
 
@@ -9,12 +13,12 @@ TScore::TScore()
     TScore::setGoals(0, 0);
 }
 
-TScore::TScore(short goalsHome, short goalsGuest)
+TScore::TScore(int goalsHome, int goalsGuest)
 {
     TScore::setGoals(goalsHome, goalsGuest);
 }
 
-void TScore::setGoals(short goalsHome, short goalsGuest)
+void TScore::setGoals(int goalsHome, int goalsGuest)
 {
     if ( goalsHome >= 0 and goalsHome <= 100 and goalsGuest >= 0 and goalsGuest <= 100 )
     {
@@ -28,7 +32,7 @@ void TScore::setGoals(short goalsHome, short goalsGuest)
     }
 }
 
-static short calcPoints(short first, short second)
+static int calcPoints(int first, int second)
 {
     if (first == second)
         return 1;
@@ -38,12 +42,12 @@ static short calcPoints(short first, short second)
         return 0;
 }
 
-short TScore::getPointsHome()
+int TScore::getPointsHome()
 {
    return calcPoints(TScore::goalsHome, TScore::goalsGuest);
 }
 
-short TScore::getPointsGuest()
+int TScore::getPointsGuest()
 {
     return calcPoints(TScore::goalsGuest, TScore::goalsHome);
 }

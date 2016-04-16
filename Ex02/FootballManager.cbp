@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Tourniermanager" />
+		<Option title="Proj_cpp_beuth" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="../AKT-7-SS-2016" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +24,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="../AKT-7-SS-2016" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,26 +36,27 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="TDate.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TDate.h" />
+		<Unit filename="TPlayer.cpp" />
+		<Unit filename="TPlayer.h" />
+		<Unit filename="TScore.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TScore.h" />
+		<Unit filename="TTeam.cpp" />
+		<Unit filename="TTeam.h" />
+		<Unit filename="TTime.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TTime.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="tdate.cpp">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="tdate.h" />
-		<Unit filename="tplayer.cpp" />
-		<Unit filename="tplayer.h" />
-		<Unit filename="tscore.cpp">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="tscore.h" />
-		<Unit filename="tteam.cpp" />
-		<Unit filename="tteam.h" />
-		<Unit filename="ttime.cpp">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="ttime.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
