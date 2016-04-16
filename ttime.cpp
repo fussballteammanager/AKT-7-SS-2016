@@ -10,12 +10,12 @@ TTime::TTime()
     TTime::setCurrentTime();
 }
 
-TTime::TTime(int hour, int minute)
+TTime::TTime(short hour, short minute)
 {
     TTime::setTime(hour, minute);
 }
 
-void TTime::setTime(int hour, int minute)
+void TTime::setTime(short hour, short minute)
 {
     if ( hour >= 0 and hour <=23 and minute >= 0 and minute <=59 )
     {
@@ -36,12 +36,12 @@ void TTime::setCurrentTime()
     TTime::minute = ltm->tm_min;
 }
 
-int TTime::getHour()
+short TTime::getHour()
 {
     return TTime::hour;
 }
 
-int TTime::getMinute()
+short TTime::getMinute()
 {
     return TTime::minute;
 }

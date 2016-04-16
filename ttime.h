@@ -16,16 +16,16 @@
     class TTime
     {
         private:
-            int hour;
-            int minute;
+            short hour;
+            short minute;
             void setCurrentTime();
 
         public:
             TTime();
-            TTime(int hour, int minute);
-            void setTime(int hour, int minute);
-            int getHour();
-            int getMinute();
+            TTime(short hour, short minute);
+            void setTime(short hour, short minute);
+            short getHour();
+            short getMinute();
             /* print time */
             void print();
     };

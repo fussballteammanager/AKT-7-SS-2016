@@ -16,19 +16,19 @@
     class TDate
     {
         private:
-            int day;
-            int month;
-            int year;
+            short day;
+            short month;
+            short year;
 
         public:
             TDate();
-            TDate(int day, int month, int year);
-            void setDate(int day, int month, int year);
+            TDate(short day, short month, short year);
+            void setDate(short day, short month, short year);
             /* set date of today */
             void setCurrentDate();
-            int getDay();
-            int getMonth();
-            int getYear();
+            short getDay();
+            short getMonth();
+            short getYear();
             /* print date */
             void print();
     };

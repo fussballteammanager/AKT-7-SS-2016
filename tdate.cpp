@@ -10,12 +10,12 @@ TDate::TDate()
     TDate::setCurrentDate();
 }
 
-TDate::TDate(int day, int month, int year)
+TDate::TDate(short day, short month, short year)
 {
     TDate::setDate(day, month, year);
 }
 
-void TDate::setDate(int day, int month, int year)
+void TDate::setDate(short day, short month, short year)
 {
     if ( day > 0 and day <=31 and month > 0 and month <=12 and
         year > 1900 and year < 3000 )
@@ -39,17 +39,17 @@ void TDate::setCurrentDate()
     TDate::year = 1900 + ltm->tm_year;
 }
 
-int TDate::getDay()
+short TDate::getDay()
 {
     return TDate::day;
 }
 
-int TDate::getMonth()
+short TDate::getMonth()
 {
     return TDate::month;
 }
 
-int TDate::getYear()
+short  TDate::getYear()
 {
     return TDate::year;
 }

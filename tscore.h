@@ -16,15 +16,15 @@
     class TScore
     {
         private:
-            int goalsHome;
-            int goalsGuest;
+            short goalsHome;
+            short goalsGuest;
 
         public:
             TScore();
-            TScore(int goalsHome, int goalsGuest);
-            void setGoals(int goalsHome, int goalsGuest);
-            int  getPointsHome();
-            int  getPointsGuest();
+            TScore(short goalsHome, short goalsGuest);
+            void setGoals(short goalsHome, short goalsGuest);
+            short getPointsHome();
+            short getPointsGuest();
             /* print goals */
             void print();
     };
