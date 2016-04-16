@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+    /*
    // Parameter: Name, Position, TricotNr, CountGoals, CountPass, CountGames, CountYellowCards, CountRedCards, Geburtstag
    TPlayer Jarstein    ("Rune Jarstein",          "Torwart",    22,  0, 0, 25, 1, 0, 29,  9, 1984);
    TPlayer Kraft       ("Thomas Kraft",           "Torwart",     1,  0, 0,  5, 0, 0, 22,  7, 1988);
@@ -49,6 +50,7 @@ int main()
    Hertha.addPlayer(Ibisevic);
 
    Hertha.print();   cout << endl;
+   */
 
    return 0;
 }

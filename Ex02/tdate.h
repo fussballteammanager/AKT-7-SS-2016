@@ -11,7 +11,7 @@
  ******************************************************/
 
 #ifndef tdate_h
-    #define tdate_h
+    #define tdate_h tdate_h
 
     class TDate
     {

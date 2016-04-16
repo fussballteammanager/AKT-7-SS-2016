@@ -11,7 +11,7 @@
  ******************************************************/
 
 #ifndef tscore_h
-    #define tscore_h
+    #define tscore_h tscore_h
 
     class TScore
     {

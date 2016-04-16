@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Proj_cpp_beuth" />
+		<Option title="Tourniermanager" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -37,10 +37,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tdate.h" />
+		<Unit filename="tplayer.cpp" />
+		<Unit filename="tplayer.h" />
 		<Unit filename="tscore.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tscore.h" />
+		<Unit filename="tteam.cpp" />
+		<Unit filename="tteam.h" />
 		<Unit filename="ttime.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
