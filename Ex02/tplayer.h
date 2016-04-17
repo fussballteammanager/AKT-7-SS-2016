@@ -37,6 +37,8 @@ class TPlayer
         void SetNumberOfYellowCards(unsigned int val) { NumberOfYellowCards = val; }
         unsigned int GetNumberOfRedCards() { return NumberOfRedCards; }
         void SetNumberOfRedCards(unsigned int val) { NumberOfRedCards = val; }
+
+        void print();
     protected:
 
 };

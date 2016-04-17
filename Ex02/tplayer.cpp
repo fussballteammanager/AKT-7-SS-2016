@@ -20,7 +20,7 @@ TPlayer::TPlayer()
     this->NumberOfRedCards = 0;
 }
 
-TPlayer::TPlayer(string name, string position, short tricotNr, unsigned int NumberOfGames, unsigned int NumberOfPasses, unsigned int NumberOfGoals, unsigned int NumberOfYellowCards, unsigned int NumberOfRedCards, unsigned int Day, unsigned int Month, unsigned int Year)
+TPlayer::TPlayer(string name, string position, short tricotNr, unsigned int NumberOfGoals, unsigned int NumberOfPasses, unsigned int NumberOfGames, unsigned int NumberOfYellowCards, unsigned int NumberOfRedCards, unsigned int Day, unsigned int Month, unsigned int Year)
 {
     this->name = name;
     this->position = position;
@@ -36,4 +36,8 @@ TPlayer::TPlayer(string name, string position, short tricotNr, unsigned int Numb
 TPlayer::~TPlayer()
 {
     //dtor
+}
+
+void TPlayer::print(){
+    cout << this->Getname() << " (Trikot-Nr. " << this->GettricotNr() << ")";
 }

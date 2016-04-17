@@ -2,6 +2,8 @@
 #define TTEAM_H TTEAM_H
 using namespace std;
 
+const int MAXPLAYER = 30;
+
 class TTeam
 {
     private:
@@ -11,9 +13,9 @@ class TTeam
         TScore Goals;
         int NumberOfPoints;
         int NumberOfPlayers;
-        TPlayer *Players[];
+        TPlayer *Players[MAXPLAYER];
     public:
-        TTeam();
+        TTeam(string name, string trainer);
         virtual ~TTeam();
         string Getname() { return name; }
         void Setname(string val) { name = val; }
@@ -29,6 +31,11 @@ class TTeam
         void SetNumberOfPlayers(int val) { NumberOfPlayers = val; }
         TPlayer GetPlayers() { return **Players; }
         void SetPlayers(TPlayer val) { **Players = val; }
+
+        bool addPlayer(TPlayer Player);
+        bool removePlayer(TPlayer Player);
+        void print();
+
     protected:
 
 };
