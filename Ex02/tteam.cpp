@@ -24,7 +24,9 @@ TTeam::TTeam(string name, string trainer)
 
 TTeam::~TTeam()
 {
-    //dtor
+    for (int i = 0; i < MAXPLAYER; i++){
+        delete this->Players[i];
+    }
 }
 
 bool TTeam::addPlayer(TPlayer Player){
@@ -32,7 +34,7 @@ bool TTeam::addPlayer(TPlayer Player){
     for (int i = 0; i < MAXPLAYER-1; i++){
         if (Players[i] == NULL){
             Players[i] = new TPlayer;
-            Players[i] = &Player;
+            *Players[i] = Player;
             rturn = true;
             break;
         }
@@ -42,9 +44,16 @@ bool TTeam::addPlayer(TPlayer Player){
     return rturn;
 }
 
-bool TTeam::removePlayer(TPlayer Player){
+bool TTeam::removePlayer(TPlayer &Player){
     bool rturn = false;
-
+    for (int i = 0; i < MAXPLAYER; i++){
+        if (this->Players[i] != NULL){
+            if (this->Players[i]->Getname() == Player.Getname()){
+                delete this->Players[i];
+                this->Players[i] = NULL;
+            }
+        }
+    }
     return rturn;
 }
 

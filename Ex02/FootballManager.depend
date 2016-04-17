@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1460903310 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\main.cpp
+1460913623 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\main.cpp
 	"TDate.h"
 	"TTime.h"
 	"TScore.h"
@@ -14,7 +14,7 @@
 
 1460908897 c:\users\julian\git clone\akt-7-ss-2016\ex02\tplayer.h
 
-1460903909 c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.h
+1460913821 c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.h
 
 1460810024 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tdate.cpp
 	<iostream>
@@ -42,7 +42,7 @@
 	"TPlayer.h"
 	"TTeam.h"
 
-1460911087 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.cpp
+1460913268 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.cpp
 	<iostream>
 	<iomanip>
 	"TDate.h"

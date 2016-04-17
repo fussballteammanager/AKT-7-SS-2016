@@ -33,7 +33,7 @@ class TTeam
         void SetPlayers(TPlayer val) { **Players = val; }
 
         bool addPlayer(TPlayer Player);
-        bool removePlayer(TPlayer Player);
+        bool removePlayer(TPlayer &Player);
         void print();
 
     protected:

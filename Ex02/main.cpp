@@ -49,5 +49,9 @@ int main()
 
     Hertha.print(); cout << endl;
 
+    Hertha.removePlayer(Ibisevic);
+
+    Hertha.print();
+
     return 0;
 }
