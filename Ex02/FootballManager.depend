@@ -42,8 +42,9 @@
 	"TPlayer.h"
 	"TTeam.h"
 
-1460909078 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.cpp
+1460911087 source:c:\users\julian\git clone\akt-7-ss-2016\ex02\tteam.cpp
 	<iostream>
+	<iomanip>
 	"TDate.h"
 	"TTime.h"
 	"TScore.h"

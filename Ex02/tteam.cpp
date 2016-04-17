@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "TDate.h"
 #include "TTime.h"
 #include "TScore.h"
@@ -63,13 +64,23 @@ void TTeam::print(){
     if (j == 1){
         cout << "Keine Spieler!" << endl;
     }else{
-        cout << "Spieler          | Nr | Spiele | Tore | Vorl. | Gelb |  Rot | Geburtstag" << endl;
-        cout << "________________________________________________________________________" << endl;
+        cout << "Spieler                 | Nr | Spiele | Tore | Vorl. | Gelb |  Rot | Geburtstag" << endl;
+        cout << "------------------------|----|--------|------|-------|------|------|-----------" << endl;
         for (int i = 0; i < MAXPLAYER; i++){
             if (Players[i] != NULL){
-                cout << Players[i]->Getname() << " | " << Players[i]->GettricotNr() << " | " << Players[i]->GetNumberOfGames() << " | " << Players[i]->GetNumberOfGoals()  << " | " <<
-                        Players[i]->GetNumberOfPasses()  << " | " << Players[i]->GetNumberOfYellowCards()  << " | " << Players[i]->GetNumberOfRedCards() <<
-                        " | " << Players[i]->GetBirthday().getDay() << "."<<Players[i]->GetBirthday().getMonth() << "."<< Players[i]->GetBirthday().getYear() << endl;
+                cout.setf(std::ios::left, std::ios::adjustfield);
+                cout << std::setw(23) << std::setfill(' ') << Players[i]->Getname();
+                cout.setf(std::ios::right, std::ios::adjustfield);
+                cout << " | " << std::setw(2) << std::setfill(' ') << Players[i]->GettricotNr()
+                << " | " << std::setw(6) << std::setfill(' ') << Players[i]->GetNumberOfGames()
+                << " | " << std::setw(4) << std::setfill(' ') << Players[i]->GetNumberOfGoals()
+                << " | " << std::setw(5) << std::setfill(' ') << Players[i]->GetNumberOfPasses()
+                << " | " << std::setw(4) << std::setfill(' ') << Players[i]->GetNumberOfYellowCards()
+                << " | " << std::setw(4) << std::setfill(' ') << Players[i]->GetNumberOfRedCards()
+                << " | " << std::setw(2) << std::setfill('0') << Players[i]->GetBirthday().getDay()
+                << "." << std::setw(2) << std::setfill('0') << Players[i]->GetBirthday().getMonth()
+                << "."<<  std::setw(4) << std::setfill('0') << Players[i]->GetBirthday().getYear()
+                << endl;
             }
         }
     }
