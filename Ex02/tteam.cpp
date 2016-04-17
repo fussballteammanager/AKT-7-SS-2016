@@ -1,12 +1,8 @@
 #include <iostream>
 #include <iomanip>
-#include "TDate.h"
-#include "TTime.h"
-#include "TScore.h"
-#include "TPlayer.h"
-#include "TTeam.h"
-using namespace std;
+#include "tteam.h"
 
+using namespace std;
 
 
 TTeam::TTeam(string name, string trainer)
@@ -17,7 +13,7 @@ TTeam::TTeam(string name, string trainer)
     this->Goals.setGoals(0,0);
     this->NumberOfPoints = 0;
     this->NumberOfPlayers = 0;
-    for (int i = 0; i < MAXPLAYER-1; i++){
+    for (int i = 0; i < MAXPLAYER; i++){
         Players[i] = NULL;
     }
 }
@@ -29,35 +25,38 @@ TTeam::~TTeam()
     }
 }
 
-bool TTeam::addPlayer(TPlayer Player){
-    bool rturn = false;
+bool TTeam::addPlayer(TPlayer Player)
+{
+    bool ret = false;
     for (int i = 0; i < MAXPLAYER-1; i++){
         if (Players[i] == NULL){
             Players[i] = new TPlayer;
             *Players[i] = Player;
-            rturn = true;
+            ret = true;
             break;
         }
     }
 
-
-    return rturn;
+    return ret;
 }
 
-bool TTeam::removePlayer(TPlayer &Player){
-    bool rturn = false;
+bool TTeam::removePlayer(TPlayer &Player)
+{
     for (int i = 0; i < MAXPLAYER; i++){
         if (this->Players[i] != NULL){
             if (this->Players[i]->Getname() == Player.Getname()){
                 delete this->Players[i];
                 this->Players[i] = NULL;
             }
+            else
+                return false;
         }
     }
-    return rturn;
+    return true;
 }
 
-void TTeam::print(){
+void TTeam::print()
+{
     int j = 1;
     cout << this->Getname() << endl << this->Gettrainer() << endl << endl;
 

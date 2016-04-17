@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Proj_cpp_beuth" />
+		<Option title="Tourniermanager" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -36,23 +36,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="TDate.cpp">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TDate.h" />
-		<Unit filename="TPlayer.cpp" />
-		<Unit filename="TPlayer.h" />
-		<Unit filename="TScore.cpp">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TScore.h" />
-		<Unit filename="TTeam.cpp" />
-		<Unit filename="TTeam.h" />
-		<Unit filename="TTime.cpp">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TTime.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="tdate.cpp" />
+		<Unit filename="tdate.h" />
+		<Unit filename="tplayer.cpp" />
+		<Unit filename="tplayer.h" />
+		<Unit filename="tscore.cpp" />
+		<Unit filename="tscore.h" />
+		<Unit filename="tteam.cpp" />
+		<Unit filename="tteam.h" />
+		<Unit filename="ttime.cpp" />
+		<Unit filename="ttime.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

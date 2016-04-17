@@ -1,9 +1,6 @@
 ﻿#include <iostream>
-#include "TDate.h"
-#include "TTime.h"
-#include "TScore.h"
-#include "TPlayer.h"
-#include "TTeam.h"
+#include "tplayer.h"
+#include "tteam.h"
 
 using namespace std;
 

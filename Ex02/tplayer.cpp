@@ -1,9 +1,6 @@
 #include <iostream>
-#include "TDate.h"
-#include "TTime.h"
-#include "TScore.h"
-#include "TPlayer.h"
-#include "TTeam.h"
+#include "tplayer.h"
+
 using namespace std;
 
 
@@ -20,7 +17,9 @@ TPlayer::TPlayer()
     this->NumberOfRedCards = 0;
 }
 
-TPlayer::TPlayer(string name, string position, short tricotNr, unsigned int NumberOfGoals, unsigned int NumberOfPasses, unsigned int NumberOfGames, unsigned int NumberOfYellowCards, unsigned int NumberOfRedCards, unsigned int Day, unsigned int Month, unsigned int Year)
+TPlayer::TPlayer(string name, string position, short tricotNr, unsigned int NumberOfGoals,
+    unsigned int NumberOfPasses, unsigned int NumberOfGames, unsigned int NumberOfYellowCards,
+    unsigned int NumberOfRedCards, unsigned int Day, unsigned int Month, unsigned int Year)
 {
     this->name = name;
     this->position = position;
