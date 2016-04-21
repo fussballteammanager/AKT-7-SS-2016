@@ -16,7 +16,7 @@
             unsigned int NumberOfGames;
             TScore Goals;
             int NumberOfPoints;
-            int NumberOfPlayers;
+            static int NumberOfPlayers;
             TPlayer *Players[MAXPLAYER];
 
         public:
@@ -32,8 +32,7 @@
             void SetGoals(TScore val) { Goals = val; }
             int GetNumberOfPoints() { return NumberOfPoints; }
             void SetNumberOfPoints(int val) { NumberOfPoints = val; }
-            int GetNumberOfPlayers() { return NumberOfPlayers; }
-            void SetNumberOfPlayers(int val) { NumberOfPlayers = val; }
+            static int GetNumberOfPlayers() { return NumberOfPlayers; }
             TPlayer GetPlayers() { return **Players; }
             void SetPlayers(TPlayer val) { **Players = val; }
 

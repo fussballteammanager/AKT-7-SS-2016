@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1461253879 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/main.cpp
+	"tplayer.h"
+	"tteam.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tplayer.h
+	"tdate.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tdate.h
+
+1461254822 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tteam.h
+	"tscore.h"
+	"tplayer.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tscore.h
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tdate.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"tdate.h"
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tplayer.cpp
+	<iostream>
+	"tplayer.h"
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tscore.cpp
+	<iostream>
+	"tscore.h"
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/ttime.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"ttime.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/ttime.h
+
+1461253830 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tteam.cpp
+	<iostream>
+	<iomanip>
+	"tteam.h"
+

@@ -15,7 +15,7 @@ int main()
     TPlayer Brooks ("John Brooks", "Abwehr", 25, 1, 1, 20, 3, 0, 28, 1, 1993);
     TPlayer Langkamp ("Sebastian Langkamp", "Abwehr", 15, 0, 1, 19, 7, 0, 15, 1, 1988);
     TPlayer Skjelbred ("Per Skjelbred", "Mittelfeld", 3, 0, 1, 28, 8 ,0, 16, 6, 1987);
-    TPlayer Darida ("Vladimír Darida", "Mittelfeld", 6, 4, 3, 28, 6, 0, 8, 8, 1990);
+    TPlayer Darida ("VladimYr Darida", "Mittelfeld", 6, 4, 3, 28, 6, 0, 8, 8, 1990);
     TPlayer Haraguchi ("Genki Haraguchi", "Mittelfeld", 24, 2, 4, 28, 4, 0, 9, 5, 1991);
     TPlayer Lustenberger("Fabian Lustenberger", "Mittelfeld", 28, 1, 0, 25, 3, 0, 2, 5, 1988);
     TPlayer Baumjohann ("Alexander Baumjohann", "Mittelfeld", 9, 1, 2, 21, 0, 0, 23, 1, 1987);

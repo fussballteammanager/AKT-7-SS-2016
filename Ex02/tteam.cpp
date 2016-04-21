@@ -4,6 +4,7 @@
 
 using namespace std;
 
+int TTeam::NumberOfPlayers = 0;
 
 TTeam::TTeam(string name, string trainer)
 {
@@ -36,7 +37,9 @@ bool TTeam::addPlayer(TPlayer Player)
             break;
         }
     }
-
+    if (ret){
+        NumberOfPlayers++;
+    }
     return ret;
 }
 
@@ -47,6 +50,7 @@ bool TTeam::removePlayer(TPlayer &Player)
             if (this->Players[i]->Getname() == Player.Getname()){
                 delete this->Players[i];
                 this->Players[i] = NULL;
+                NumberOfPlayers--;
             }
             else
                 return false;
@@ -76,19 +80,19 @@ void TTeam::print()
         cout << "------------------------|----|--------|------|-------|------|------|-----------" << endl;
         for (int i = 0; i < MAXPLAYER; i++){
             if (Players[i] != NULL){
-                cout.setf(std::ios::left, std::ios::adjustfield);
-                cout << std::setw(23) << std::setfill(' ') << Players[i]->Getname();
-                cout.setf(std::ios::right, std::ios::adjustfield);
-                cout << " | " << std::setw(2) << std::setfill(' ') << Players[i]->GettricotNr()
-                << " | " << std::setw(6) << std::setfill(' ') << Players[i]->GetNumberOfGames()
-                << " | " << std::setw(4) << std::setfill(' ') << Players[i]->GetNumberOfGoals()
-                << " | " << std::setw(5) << std::setfill(' ') << Players[i]->GetNumberOfPasses()
-                << " | " << std::setw(4) << std::setfill(' ') << Players[i]->GetNumberOfYellowCards()
-                << " | " << std::setw(4) << std::setfill(' ') << Players[i]->GetNumberOfRedCards()
-                << " | " << std::setw(2) << std::setfill('0') << Players[i]->GetBirthday().getDay()
-                << "." << std::setw(2) << std::setfill('0') << Players[i]->GetBirthday().getMonth()
-                << "."<<  std::setw(4) << std::setfill('0') << Players[i]->GetBirthday().getYear()
-                << endl;
+                cout.setf(ios::left, ios::adjustfield);
+                cout << setw(23) << setfill(' ') << Players[i]->Getname();
+                cout.setf(ios::right, ios::adjustfield);
+                cout << " | " << setw(2) << Players[i]->GettricotNr()
+                << " | " << setw(6) << Players[i]->GetNumberOfGames()
+                << " | " << setw(4) << Players[i]->GetNumberOfGoals()
+                << " | " << setw(5) << Players[i]->GetNumberOfPasses()
+                << " | " << setw(4) << Players[i]->GetNumberOfYellowCards()
+                << " | " << setw(4) << Players[i]->GetNumberOfRedCards()
+                << " | " << setw(2) << setfill('0') << Players[i]->GetBirthday().getDay()
+                << "." << setw(2) << Players[i]->GetBirthday().getMonth()
+                << "."<<  setw(4) << Players[i]->GetBirthday().getYear()
+                << setfill(' ') << endl;
             }
         }
     }
