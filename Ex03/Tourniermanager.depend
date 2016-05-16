@@ -1,0 +1,135 @@
+# depslib dependency file v1.0
+1461253879 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/main.cpp
+	"tplayer.h"
+	"tteam.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tplayer.h
+	"tdate.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tdate.h
+
+1461254822 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tteam.h
+	"tscore.h"
+	"tplayer.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tscore.h
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tdate.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"tdate.h"
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tplayer.cpp
+	<iostream>
+	"tplayer.h"
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tscore.cpp
+	<iostream>
+	"tscore.h"
+
+1461253552 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/ttime.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"ttime.h"
+
+1461253552 /home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/ttime.h
+
+1461253830 source:/home/lislinux/Arbeitsfläche/c++/AKT-7-SS-2016/Ex02/tteam.cpp
+	<iostream>
+	<iomanip>
+	"tteam.h"
+
+1463412536 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\main.cpp
+	<iostream>
+	"tplayer.h"
+	"tteam.h"
+	"ttournament.h"
+
+1463411496 c:\users\julian\git clone\akt-7-ss-2016\ex03\tplayer.h
+	"tdate.h"
+	"tdate.h"
+	<string>
+
+1463411488 c:\users\julian\git clone\akt-7-ss-2016\ex03\tdate.h
+	<string>
+
+1463426347 c:\users\julian\git clone\akt-7-ss-2016\ex03\tteam.h
+	"tscore.h"
+	"tplayer.h"
+	<string>
+
+1463399596 c:\users\julian\git clone\akt-7-ss-2016\ex03\tscore.h
+
+1463428223 c:\users\julian\git clone\akt-7-ss-2016\ex03\ttournament.h
+	<string>
+	<iostream>
+	<fstream>
+	"tteam.h"
+	"tstadium.h"
+
+1463430403 c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.h
+	<string>
+
+1463414562 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tdate.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"tdate.h"
+
+1463414562 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tplayer.cpp
+	<iostream>
+	"tplayer.h"
+
+1463395868 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tscore.cpp
+	<iostream>
+	"tscore.h"
+
+1463430403 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.cpp
+	"tstadium.h"
+	<string>
+	<iostream>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tdate.h"
+	"tteam.h"
+	"tplayer.h"
+	"tstadium.h"
+	"ttournament.h"
+
+1463429416 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tteam.cpp
+	<iomanip>
+	"tteam.h"
+	<string>
+	<iostream>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tdate.h"
+	"tteam.h"
+	"tplayer.h"
+	"tstadium.h"
+	"ttournament.h"
+
+1463395868 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\ttime.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"ttime.h"
+
+1463399596 c:\users\julian\git clone\akt-7-ss-2016\ex03\ttime.h
+
+1463423642 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\ttournament.cpp
+	<string>
+	<iostream>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tdate.h"
+	"tteam.h"
+	"tplayer.h"
+	"tstadium.h"
+	"ttournament.h"
+
