@@ -199,7 +199,7 @@
   <YearOfConstruction>1934</YearOfConstruction>
  </Stadium>
  <Stadium>
-  <Name>Allianz Arena</Name>
+  <Name>Allianz_Arena</Name>
   <NumberOfSeats>75000</NumberOfSeats>
   <Town>Muenchen</Town>
   <Country>Deutschland</Country>

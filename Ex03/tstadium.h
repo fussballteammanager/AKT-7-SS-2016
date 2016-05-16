@@ -7,6 +7,7 @@ class TStadium
 {
     public:
         TStadium();
+        TStadium(std::string name, std::string town, std::string country, int seats, int year);
         ~TStadium();
         std::string GetStName() { return StName; }
         void SetStName(std::string val) { StName = val; }
@@ -20,6 +21,9 @@ class TStadium
         void SetYearOfConstruction(int val) { YearOfConstruction = val; }
         int load(std::ifstream &ifs);
         void print();
+        static bool strcontain(std::string in, std::string tag);
+        static std::string tagremove(std::string in, std::string tag);
+        static std::string ReadUnspaced(std::ifstream &in);
     protected:
     private:
         std::string StName;

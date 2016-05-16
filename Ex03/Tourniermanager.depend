@@ -69,7 +69,7 @@
 	"tteam.h"
 	"tstadium.h"
 
-1463430403 c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.h
+1463435418 c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.h
 	<string>
 
 1463414562 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tdate.cpp
@@ -86,7 +86,7 @@
 	<iostream>
 	"tscore.h"
 
-1463430403 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.cpp
+1463436716 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.cpp
 	"tstadium.h"
 	<string>
 	<iostream>
@@ -121,7 +121,7 @@
 
 1463399596 c:\users\julian\git clone\akt-7-ss-2016\ex03\ttime.h
 
-1463423642 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\ttournament.cpp
+1463437339 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\ttournament.cpp
 	<string>
 	<iostream>
 	<fstream>
