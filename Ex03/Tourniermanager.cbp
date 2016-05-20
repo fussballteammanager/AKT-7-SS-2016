@@ -49,6 +49,8 @@
 		<Unit filename="tteam.h" />
 		<Unit filename="ttime.cpp" />
 		<Unit filename="ttime.h" />
+		<Unit filename="ttools.cpp" />
+		<Unit filename="ttools.h" />
 		<Unit filename="ttournament.cpp" />
 		<Unit filename="ttournament.h" />
 		<Extensions>

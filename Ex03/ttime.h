@@ -27,7 +27,6 @@
             void setTime(short hour, short minute);
             short getHour();
             short getMinute();
-            /* print time */
             void print();
     };
 

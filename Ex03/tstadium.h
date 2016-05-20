@@ -21,9 +21,6 @@ class TStadium
         void SetYearOfConstruction(int val) { YearOfConstruction = val; }
         int load(std::ifstream &ifs);
         void print();
-        static bool strcontain(std::string in, std::string tag);
-        static std::string tagremove(std::string in, std::string tag);
-        static std::string ReadUnspaced(std::ifstream &in);
     protected:
     private:
         std::string StName;

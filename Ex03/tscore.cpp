@@ -20,8 +20,7 @@ void TScore::setGoals(short goalsHome, short goalsGuest)
     {
         TScore::goalsHome  = goalsHome;
         TScore::goalsGuest = goalsGuest;
-    }
-    else
+    }else
     {
         TScore::goalsHome  = 0;
         TScore::goalsGuest = 0;

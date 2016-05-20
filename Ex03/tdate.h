@@ -27,12 +27,10 @@
             TDate();
             TDate(short day, short month, short year);
             void setDate(short day, short month, short year);
-            /* set date of today */
             void setCurrentDate();
             short getDay();
             short getMonth();
             short getYear();
-            /* prshort date */
             int load(std::ifstream &ifs);
             void print();
     };

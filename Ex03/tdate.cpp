@@ -7,6 +7,7 @@
 #include <algorithm>
 #include "tdate.h"
 #include "ttournament.h"
+#include "ttools.h"
 
 using namespace std;
 
@@ -36,10 +37,8 @@ void TDate::setDate(short day, short month, short year)
 
 void TDate::setCurrentDate()
 {
-    // get current date from operator system
     time_t now = time(0);
     tm *ltm = localtime(&now);
-
     TDate::day = ltm->tm_mday;
     TDate::month = 1 + ltm->tm_mon;
     TDate::year = 1900 + ltm->tm_year;
@@ -62,8 +61,7 @@ short TDate::getYear()
 
 void TDate::print()
 {
-    cout << setw(2) << setfill('0') << this->day << "."
-        << setw(2) << setfill('0') <<  this->month << "." << this->year;
+    cout << setw(2) << setfill('0') << this->day << "." << setw(2) << setfill('0') <<  this->month << "." << this->year;
 }
 
 int TDate::load(std::ifstream &ifs)
@@ -71,30 +69,27 @@ int TDate::load(std::ifstream &ifs)
     string line;
     while(ifs.good())
     {
-        line = TTournament::ReadUnspaced(ifs);
+        line = TTools::ReadUnspaced(ifs);
         if (line == "</Birthday>")
         {
             return 1;
-        }else if(TTournament::strcontain(line,"<Day>"))
+        }else if(TTools::strcontain(line,"<Day>"))
         {
-
             std::string tag1 = "<Day>",tag2 = "</Day>";
-            line = TTournament::tagremove(line, tag1);
-            line = TTournament::tagremove(line, tag2);
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
             this->day = atoi(line.c_str());
-        }else if(TTournament::strcontain(line,"<Month>"))
+        }else if(TTools::strcontain(line,"<Month>"))
         {
-
             std::string tag1 = "<Month>",tag2 = "</Month>";
-            line = TTournament::tagremove(line, tag1);
-            line = TTournament::tagremove(line, tag2);
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
             this->month = atoi(line.c_str());
-        }else if(TTournament::strcontain(line,"<Year>"))
+        }else if(TTools::strcontain(line,"<Year>"))
         {
-
             std::string tag1 = "<Year>",tag2 = "</Year>";
-            line = TTournament::tagremove(line, tag1);
-            line = TTournament::tagremove(line, tag2);
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
             this->year = atoi(line.c_str());
         }
     }

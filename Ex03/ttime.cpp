@@ -22,17 +22,16 @@ void TTime::setTime(short hour, short minute)
     {
         TTime::hour = hour;
         TTime::minute = minute;
-    }
-    else
+    }else
+    {
         TTime::setCurrentTime();
+    }
 }
 
 void TTime::setCurrentTime()
 {
-    // get current date from operator system
     time_t now = time(0);
     tm *ltm = localtime(&now);
-
     TTime::hour = ltm->tm_hour;
     TTime::minute = ltm->tm_min;
 }
@@ -49,6 +48,5 @@ short TTime::getMinute()
 
 void TTime::print()
 {
-    cout << setw(2) << setfill('0') << this->hour << ":"
-        << setw(2) << setfill('0') << this->minute;
+    cout << setw(2) << setfill('0') << this->hour << ":" << setw(2) << setfill('0') << this->minute;
 }

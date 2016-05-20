@@ -10,7 +10,7 @@
 #include "tplayer.h"
 #include "tstadium.h"
 #include "ttournament.h"
-
+#include "ttools.h"
 
 using namespace std;
 
@@ -86,16 +86,11 @@ void TTeam::print()
 {
     int j = 1;
     cout << this->Getname() << endl << this->Gettrainer() << endl << endl;
-
     for (int i = 0; i < MAXPLAYER; i++){
-        //cout << i << "=i ";
         if (Players[i] != NULL){
             j++;
-
         }
-    //cout << j << "=j ";
     }
-
     if (j == 1){
         cout << "Keine Spieler!" << endl;
     }else{
@@ -126,7 +121,7 @@ int TTeam::load(std::ifstream &ifs)
     string line;
     while(ifs.good())
     {
-        line = TTournament::ReadUnspaced(ifs);
+        line = TTools::ReadUnspaced(ifs);
         if (line == "</Team>")
         {
             return 1;
@@ -135,19 +130,19 @@ int TTeam::load(std::ifstream &ifs)
             this->Players[NumberOfPlayers] = new TPlayer;
             this->Players[NumberOfPlayers]->load(ifs);
             NumberOfPlayers++;
-        }else if(TTournament::strcontain(line,"<Name>"))
+        }else if(TTools::strcontain(line,"<Name>"))
         {
 
             std::string tag1 = "<Name>",tag2 = "</Name>";
-            line = TTournament::tagremove(line, tag1);
-            line = TTournament::tagremove(line, tag2);
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
             this->name = line;
-        }else if(TTournament::strcontain(line,"<Trainer>"))
+        }else if(TTools::strcontain(line,"<Trainer>"))
         {
 
             std::string tag1 = "<Trainer>",tag2 = "</Trainer>";
-            line = TTournament::tagremove(line, tag1);
-            line = TTournament::tagremove(line, tag2);
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
             this->trainer = line;
         }
     }

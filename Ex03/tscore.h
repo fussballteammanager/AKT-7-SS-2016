@@ -27,9 +27,8 @@
             TScore();
             TScore(short goalsHome, short goalsGuest);
             void setGoals(short goalsHome, short goalsGuest);
-            short  getPointsHome();
-            short  getPointsGuest();
-            /* print goals */
+            short getPointsHome();
+            short getPointsGuest();
             void print();
     };
 
