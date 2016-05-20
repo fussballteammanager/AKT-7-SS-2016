@@ -42,7 +42,7 @@
             void SetNumberOfYellowCards(unsigned int val) { NumberOfYellowCards = val; }
             unsigned int GetNumberOfRedCards() { return NumberOfRedCards; }
             void SetNumberOfRedCards(unsigned int val) { NumberOfRedCards = val; }
-            int load(std::string);
+            int load(std::ifstream &ifs);
             void print();
         protected:
 

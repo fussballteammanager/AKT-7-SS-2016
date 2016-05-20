@@ -20,6 +20,7 @@
             TPlayer *Players[MAXPLAYER];
 
         public:
+            TTeam();
             TTeam(std::string name, std::string trainer);
             virtual ~TTeam();
             std::string Getname() { return name; }

@@ -1,7 +1,12 @@
 #include <iostream>
+#include <string>
 #include <iomanip>
 #include <ctime>
+#include <fstream>
+#include <cstdio>
+#include <algorithm>
 #include "tdate.h"
+#include "ttournament.h"
 
 using namespace std;
 
@@ -61,8 +66,37 @@ void TDate::print()
         << setw(2) << setfill('0') <<  this->month << "." << this->year;
 }
 
-int TDate::load(string line)
+int TDate::load(std::ifstream &ifs)
 {
-    cout << "found Date Tag: " << line << endl;
+    string line;
+    while(ifs.good())
+    {
+        line = TTournament::ReadUnspaced(ifs);
+        if (line == "</Birthday>")
+        {
+            return 1;
+        }else if(TTournament::strcontain(line,"<Day>"))
+        {
+
+            std::string tag1 = "<Day>",tag2 = "</Day>";
+            line = TTournament::tagremove(line, tag1);
+            line = TTournament::tagremove(line, tag2);
+            this->day = atoi(line.c_str());
+        }else if(TTournament::strcontain(line,"<Month>"))
+        {
+
+            std::string tag1 = "<Month>",tag2 = "</Month>";
+            line = TTournament::tagremove(line, tag1);
+            line = TTournament::tagremove(line, tag2);
+            this->month = atoi(line.c_str());
+        }else if(TTournament::strcontain(line,"<Year>"))
+        {
+
+            std::string tag1 = "<Year>",tag2 = "</Year>";
+            line = TTournament::tagremove(line, tag1);
+            line = TTournament::tagremove(line, tag2);
+            this->year = atoi(line.c_str());
+        }
+    }
     return 0;
 }

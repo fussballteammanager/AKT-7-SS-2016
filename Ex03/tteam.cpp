@@ -16,6 +16,19 @@ using namespace std;
 
 int TTeam::NumberOfPlayers = 0;
 
+TTeam::TTeam()
+{
+    this->name = "";
+    this->trainer = "";
+    this->NumberOfGames = 0;
+    this->Goals.setGoals(0,0);
+    this->NumberOfPoints = 0;
+    this->NumberOfPlayers = 0;
+    for (int i = 0; i < MAXPLAYER; i++){
+        Players[i] = NULL;
+    }
+}
+
 TTeam::TTeam(string name, string trainer)
 {
     this->name = name;
@@ -113,12 +126,29 @@ int TTeam::load(std::ifstream &ifs)
     string line;
     while(ifs.good())
     {
-        getline(ifs,line);
-        line.erase(std::remove( line.begin(), line.end(), ' ' ), line.end() );
-        //line = TTournament.ReadUnspaced(&ifs);
+        line = TTournament::ReadUnspaced(ifs);
         if (line == "</Team>")
         {
             return 1;
+        }else if (line == "<Player>")
+        {
+            this->Players[NumberOfPlayers] = new TPlayer;
+            this->Players[NumberOfPlayers]->load(ifs);
+            NumberOfPlayers++;
+        }else if(TTournament::strcontain(line,"<Name>"))
+        {
+
+            std::string tag1 = "<Name>",tag2 = "</Name>";
+            line = TTournament::tagremove(line, tag1);
+            line = TTournament::tagremove(line, tag2);
+            this->name = line;
+        }else if(TTournament::strcontain(line,"<Trainer>"))
+        {
+
+            std::string tag1 = "<Trainer>",tag2 = "</Trainer>";
+            line = TTournament::tagremove(line, tag1);
+            line = TTournament::tagremove(line, tag2);
+            this->trainer = line;
         }
     }
     return 0;

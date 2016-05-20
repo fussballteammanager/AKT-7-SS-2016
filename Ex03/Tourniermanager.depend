@@ -41,21 +41,21 @@
 	<iomanip>
 	"tteam.h"
 
-1463412536 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\main.cpp
+1463760275 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\main.cpp
 	<iostream>
 	"tplayer.h"
 	"tteam.h"
 	"ttournament.h"
 
-1463411496 c:\users\julian\git clone\akt-7-ss-2016\ex03\tplayer.h
+1463755553 c:\users\julian\git clone\akt-7-ss-2016\ex03\tplayer.h
 	"tdate.h"
 	"tdate.h"
 	<string>
 
-1463411488 c:\users\julian\git clone\akt-7-ss-2016\ex03\tdate.h
+1463755544 c:\users\julian\git clone\akt-7-ss-2016\ex03\tdate.h
 	<string>
 
-1463426347 c:\users\julian\git clone\akt-7-ss-2016\ex03\tteam.h
+1463760051 c:\users\julian\git clone\akt-7-ss-2016\ex03\tteam.h
 	"tscore.h"
 	"tplayer.h"
 	<string>
@@ -72,21 +72,31 @@
 1463435418 c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.h
 	<string>
 
-1463414562 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tdate.cpp
+1463755885 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tdate.cpp
 	<iostream>
+	<string>
 	<iomanip>
 	<ctime>
+	<fstream>
+	<cstdio>
+	<algorithm>
 	"tdate.h"
+	"ttournament.h"
 
-1463414562 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tplayer.cpp
+1463756909 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tplayer.cpp
 	<iostream>
+	<string>
+	<fstream>
+	<cstdio>
+	<algorithm>
 	"tplayer.h"
+	"ttournament.h"
 
 1463395868 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tscore.cpp
 	<iostream>
 	"tscore.h"
 
-1463436716 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.cpp
+1463437520 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tstadium.cpp
 	"tstadium.h"
 	<string>
 	<iostream>
@@ -99,7 +109,7 @@
 	"tstadium.h"
 	"ttournament.h"
 
-1463429416 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tteam.cpp
+1463760240 source:c:\users\julian\git clone\akt-7-ss-2016\ex03\tteam.cpp
 	<iomanip>
 	"tteam.h"
 	<string>

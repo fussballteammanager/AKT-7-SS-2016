@@ -34,6 +34,7 @@ class TTournament
         static bool strcontain(std::string in, std::string tag);
         static std::string tagremove(std::string in, std::string tag);
         static std::string ReadUnspaced(std::ifstream &in);
+        static unsigned int isChar(char charakter, std::string line);
     protected:
     private:
         std::string TName;

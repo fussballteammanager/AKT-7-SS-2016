@@ -11,9 +11,9 @@ int main()
      Bundesliga.print();
      cout << endl;
      cout << "Erster und letzter Spieler in der Liste:" << endl;
-     //((Bundesliga.getTeam(0))->GetPlayers(0))->print();
+     ((Bundesliga.getTeam(0))->GetPlayers(0))->print();
      cout << endl;
-     //((Bundesliga.getTeam(0))->GetPlayers((Bundesliga.getTeam(0))->GetNumberOfPlayers() - 1))->print();
+     ((Bundesliga.getTeam(0))->GetPlayers((Bundesliga.getTeam(0))->GetNumberOfPlayers() - 1))->print();
      cout << endl;
      return 0;
 }

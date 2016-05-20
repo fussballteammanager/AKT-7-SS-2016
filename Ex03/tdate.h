@@ -33,7 +33,7 @@
             short getMonth();
             short getYear();
             /* prshort date */
-            int load(std::string);
+            int load(std::ifstream &ifs);
             void print();
     };
 

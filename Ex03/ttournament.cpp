@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <cstdio>
 #include <algorithm>
@@ -8,6 +9,7 @@
 #include "tplayer.h"
 #include "tstadium.h"
 #include "ttournament.h"
+
 
 using namespace std;
 
@@ -56,7 +58,40 @@ void TTournament::print()
     }
 
     cout << endl << "Teams:" << endl;
+    for(int i = 0; i < this->GetNumberOfTeams(); i++)
+    {
+        cout << this->Team[i]->Getname() << endl << this->Team[i]->Gettrainer() << endl << endl;
 
+        if (this->Team[i]->GetNumberOfPlayers() <= 0){
+
+            cout << "Keine Spieler!" << endl;
+
+        }else{
+
+            cout << "Spieler                 | Nr | Spiele | Tore | Vorl. | Gelb |  Rot | Geburtstag" << endl;
+            cout << "------------------------|----|--------|------|-------|------|------|-----------" << endl;
+
+            for (int j = 0; j < this->Team[i]->GetNumberOfPlayers(); j++){
+
+                if (this->Team[i]->GetPlayers(j) != NULL){
+                    cout.setf(ios::left, ios::adjustfield);
+                    cout << setw(23) << setfill(' ') << this->Team[i]->GetPlayers(j)->Getname();
+                    cout.setf(ios::right, ios::adjustfield);
+                    cout << " | " << setw(2) << this->Team[i]->GetPlayers(j)->GettricotNr()
+                    << " | " << setw(6) << this->Team[i]->GetPlayers(j)->GetNumberOfGames()
+                    << " | " << setw(4) << this->Team[i]->GetPlayers(j)->GetNumberOfGoals()
+                    << " | " << setw(5) << this->Team[i]->GetPlayers(j)->GetNumberOfPasses()
+                    << " | " << setw(4) << this->Team[i]->GetPlayers(j)->GetNumberOfYellowCards()
+                    << " | " << setw(4) << this->Team[i]->GetPlayers(j)->GetNumberOfRedCards()
+                    << " | " << setw(2) << setfill('0') << this->Team[i]->GetPlayers(j)->GetBirthday().getDay()
+                    << "." << setw(2) << this->Team[i]->GetPlayers(j)->GetBirthday().getMonth()
+                    << "."<<  setw(4) << this->Team[i]->GetPlayers(j)->GetBirthday().getYear()
+                    << setfill(' ') << endl;
+                }
+            }
+            cout << "------------------------|----|--------|------|-------|------|------|-----------" << endl;
+        }
+    }
 }
 
 int TTournament::load(std::ifstream &ifs)
@@ -71,7 +106,9 @@ int TTournament::load(std::ifstream &ifs)
             line = ReadUnspaced(ifs);
             if (line == "<Team>")
             {
+                this->Team[NumberOfTeams] = new TTeam;
                 this->Team[NumberOfTeams]->load(ifs);
+                NumberOfTeams++;
             }else if (line == "<Stadium>")
             {
                 this->Stadium[NumberOfStadiums] = new TStadium;
@@ -118,6 +155,26 @@ string TTournament::ReadUnspaced(std::ifstream &in)
 {
     std::string line;
     getline(in,line);
-    line.erase(std::remove( line.begin(), line.end(), ' ' ), line.end() );
+    //unsigned int g = isChar(' ', line);
+    line.erase(line.begin(), std::find_if(line.begin(), line.end(), std::bind1st(std::not_equal_to<char>(), ' ')));
+    //line.erase(std::remove( line.begin(), g, ' ' ), line.end() );
     return line;
 }
+
+unsigned int TTournament::isChar(char charakter, std::string line)
+{
+    unsigned int i;
+    for(i = 0; i < line.length(); i++)
+    {
+        if(line.at(i) == charakter)
+        {
+
+        }else{
+            break;
+        }
+    }
+    return i;
+}
+
+
+
