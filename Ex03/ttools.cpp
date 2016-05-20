@@ -1,14 +1,6 @@
-#include <string>
-#include <iostream>
-#include <iomanip>
-#include <fstream>
-#include <cstdio>
 #include <algorithm>
-#include "tdate.h"
-#include "tteam.h"
-#include "tplayer.h"
-#include "tstadium.h"
-#include "ttournament.h"
+#include <fstream>
+
 #include "ttools.h"
 
 TTools::TTools()
@@ -45,7 +37,7 @@ std::string TTools::tagremove(std::string in, std::string tag)
 std::string TTools::ReadUnspaced(std::ifstream &in)
 {
     std::string line;
-    getline(in,line);
+    getline (in,line);
     line.erase(line.begin(), std::find_if(line.begin(), line.end(), std::bind1st(std::not_equal_to<char>(), ' ')));
     return line;
 }

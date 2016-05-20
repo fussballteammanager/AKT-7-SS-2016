@@ -1,12 +1,9 @@
 #include <iostream>
-#include <string>
 #include <iomanip>
-#include <ctime>
 #include <fstream>
-#include <cstdio>
 #include <algorithm>
+
 #include "tdate.h"
-#include "ttournament.h"
 #include "ttools.h"
 
 using namespace std;

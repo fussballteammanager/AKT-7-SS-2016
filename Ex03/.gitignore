@@ -28,3 +28,9 @@
 *.app
 **/bin/Debug/
 **/bin/Release/
+
+# Codeblocks
+*.layout
+*.depend
+*.layout
+

@@ -1,10 +1,8 @@
 #include <iostream>
-#include <string>
 #include <fstream>
-#include <cstdio>
 #include <algorithm>
+
 #include "tplayer.h"
-#include "ttournament.h"
 #include "ttools.h"
 
 using namespace std;

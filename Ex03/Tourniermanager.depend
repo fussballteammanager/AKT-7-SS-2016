@@ -143,3 +143,114 @@
 	"tstadium.h"
 	"ttournament.h"
 
+1463774271 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/main.cpp
+	<iostream>
+	"tplayer.h"
+	"tteam.h"
+	"ttournament.h"
+
+1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tplayer.h
+	"tdate.h"
+	"tdate.h"
+	<string>
+
+1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tdate.h
+	<string>
+
+1463773127 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tteam.h
+	"tscore.h"
+	"tplayer.h"
+	<string>
+
+1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tscore.h
+
+1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttournament.h
+	<string>
+	<iostream>
+	<fstream>
+	"tteam.h"
+	"tstadium.h"
+
+1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tstadium.h
+	<string>
+
+1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tdate.cpp
+	<iostream>
+	<string>
+	<iomanip>
+	<ctime>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tdate.h"
+	"ttournament.h"
+	"ttools.h"
+
+1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttools.h
+	<string>
+
+1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tplayer.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tplayer.h"
+	"ttournament.h"
+	"ttools.h"
+
+1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tscore.cpp
+	<iostream>
+	"tscore.h"
+
+1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tstadium.cpp
+	"tstadium.h"
+	<string>
+	<iostream>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tdate.h"
+	"tteam.h"
+	"tplayer.h"
+	"tstadium.h"
+	"ttournament.h"
+	"ttools.h"
+
+1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tteam.cpp
+	<iomanip>
+	"tteam.h"
+	<string>
+	<iostream>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tdate.h"
+	"tteam.h"
+	"tplayer.h"
+	"tstadium.h"
+	"ttournament.h"
+	"ttools.h"
+
+1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttime.cpp
+	<iostream>
+	<iomanip>
+	<ctime>
+	"ttime.h"
+
+1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttime.h
+
+1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttools.cpp
+	<string>
+	<iostream>
+	<iomanip>
+	<fstream>
+	<cstdio>
+	<algorithm>
+	"tdate.h"
+	"tteam.h"
+	"tplayer.h"
+	"tstadium.h"
+	"ttournament.h"
+	"ttools.h"
+

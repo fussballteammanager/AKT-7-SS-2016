@@ -1,5 +1,5 @@
 #ifndef TTOOLS_H
-#define TTOOLS_H
+#define TTOOLS_H TTOOLS_H
 
 #include <string>
 

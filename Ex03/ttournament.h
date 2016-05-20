@@ -1,11 +1,8 @@
 #ifndef TTOURNAMENT_H
 #define TTOURNAMENT_H TTOURNAMENT_H
-#include <string>
-#include <iostream>
-#include <fstream>
+
 #include "tteam.h"
 #include "tstadium.h"
-
 
 #define MAXTEAMS 12
 #define MAXSTADIUMS 12

@@ -1,13 +1,7 @@
-#include <string>
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 #include <fstream>
-#include <cstdio>
-#include <algorithm>
-#include "tdate.h"
-#include "tteam.h"
-#include "tplayer.h"
-#include "tstadium.h"
+
 #include "ttournament.h"
 #include "ttools.h"
 
@@ -27,9 +21,6 @@ TTournament::TTournament(string DName)
         load(r_ifs);
     }
     ifs.close();
-    if(!ifs.is_open())
-    {
-    }
 
 }
 
@@ -117,36 +108,7 @@ int TTournament::load(std::ifstream &ifs)
     }
     return 0;
 }
-/*
-bool TTournament::strcontain(std::string in, std::string tag)
-{
-    if (in.find(tag) != std::string::npos)
-    {
-        return true;
-    }else
-    {
-        return false;
-    }
-}
 
-string TTournament::tagremove(std::string in, std::string tag)
-{
-    std::string::size_type i = in.find(tag);
-    if (i != std::string::npos)
-    {
-        in.erase(i, tag.length());
-    }
-    return in;
-}
-
-string TTournament::ReadUnspaced(std::ifstream &in)
-{
-    std::string line;
-    getline(in,line);
-    line.erase(line.begin(), std::find_if(line.begin(), line.end(), std::bind1st(std::not_equal_to<char>(), ' ')));
-    return line;
-}
-*/
 
 
 

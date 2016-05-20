@@ -1,15 +1,10 @@
 #include <iomanip>
-#include "tteam.h"
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <cstdio>
-#include <algorithm>
-#include "tdate.h"
+
 #include "tteam.h"
-#include "tplayer.h"
-#include "tstadium.h"
-#include "ttournament.h"
 #include "ttools.h"
 
 using namespace std;

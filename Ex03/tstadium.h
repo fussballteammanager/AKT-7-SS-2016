@@ -1,7 +1,7 @@
 #ifndef TSTADIUM_H
 #define TSTADIUM_H TSTADIUM_H
-#include <string>
 
+#include <string>
 
 class TStadium
 {
