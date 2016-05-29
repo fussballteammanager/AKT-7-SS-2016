@@ -67,7 +67,8 @@ bool TTeam::removePlayer(TPlayer &Player)
         if (this->Players[i] != NULL){
             if (this->Players[i]->Getname() == Player.Getname()){
                 delete this->Players[i];
-                this->Players[i] = NULL;
+                this->Players[i] = this->Players[NumberOfPlayers-1];
+                this->Players[NumberOfPlayers-1] = NULL;
                 NumberOfPlayers--;
             }
             else

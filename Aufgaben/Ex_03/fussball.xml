@@ -1,0 +1,208 @@
+<Tournament>
+ <Name>1. Bundesliga</Name>
+ <Team>
+  <Name>Hertha BSC</Name>
+  <Player>
+   <Name>Rune Jarstein</Name>
+   <Position>Torwart</Position>
+   <TricotNr>22</TricotNr>
+   <NumberOfGames>25</NumberOfGames>
+   <NumberOfYellowCards>1</NumberOfYellowCards>
+   <Birthday>
+    <Day>29</Day>
+    <Month>9</Month>
+    <Year>1984</Year>
+   </Birthday>
+  </Player>
+  <Trainer>Pal Dardai</Trainer>
+  <Player>
+   <Name>Thomas Kraft</Name>
+   <TricotNr>1</TricotNr>
+   <NumberOfGames>5</NumberOfGames>
+   <Position>Torwart</Position>
+   <Birthday>
+    <Day>22</Day>
+    <Month>7</Month>
+    <Year>1988</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Marvin Plattenhardt</Name>
+   <TricotNr>21</TricotNr>
+   <NumberOfGames>29</NumberOfGames>
+   <Position>Abwehr</Position>
+   <NumberOfYellowCards>4</NumberOfYellowCards>
+   <Birthday>
+    <Day>26</Day>
+    <Month>1</Month>
+    <Year>1992</Year>
+   </Birthday>
+   <NumberOfGoals>2</NumberOfGoals>
+   <NumberOfPasses>5</NumberOfPasses>
+  </Player>
+  <Player>
+   <Name>Mitchell-Elijah Weiser</Name>
+   <TricotNr>20</TricotNr>
+   <Position>Abwehr</Position>
+   <NumberOfGames>25</NumberOfGames>
+   <NumberOfGoals>2</NumberOfGoals>
+   <NumberOfPasses>4</NumberOfPasses>
+   <NumberOfYellowCards>5</NumberOfYellowCards>
+   <Birthday>
+    <Day>21</Day>
+    <Month>4</Month>
+    <Year>1994</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>John Brooks</Name>
+   <TricotNr>25</TricotNr>
+   <Position>Abwehr</Position>
+   <NumberOfGames>20</NumberOfGames>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfPasses>1</NumberOfPasses>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+   <Birthday>
+    <Day>28</Day>
+    <Month>1</Month>
+    <Year>1993</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Sebastian Langkamp</Name>
+   <TricotNr>15</TricotNr>
+   <Position>Abwehr</Position>
+   <NumberOfGames>19</NumberOfGames>
+   <NumberOfYellowCards>7</NumberOfYellowCards>
+   <NumberOfPasses>1</NumberOfPasses>
+   <Birthday>
+    <Day>15</Day>
+    <Month>1</Month>
+    <Year>1988</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Per Skjelbred</Name>
+   <NumberOfPasses>1</NumberOfPasses>
+   <TricotNr>3</TricotNr>
+   <Position>Mittelfeld</Position>
+   <NumberOfGames>28</NumberOfGames>
+   <NumberOfYellowCards>8</NumberOfYellowCards>
+   <Birthday>
+    <Day>16</Day>
+    <Month>6</Month>
+    <Year>1987</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Vladimir Darida</Name>
+   <TricotNr>6</TricotNr>
+   <Position>Mittelfeld</Position>
+   <NumberOfGoals>4</NumberOfGoals>
+   <NumberOfPasses>3</NumberOfPasses>
+   <NumberOfGames>28</NumberOfGames>
+   <NumberOfYellowCards>6</NumberOfYellowCards>
+   <Birthday>
+    <Day>8</Day>
+    <Month>8</Month>
+    <Year>1990</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Genki Haraguchi</Name>
+   <TricotNr>24</TricotNr>
+   <Position>Mittelfeld</Position>
+   <NumberOfGames>28</NumberOfGames>
+   <NumberOfPasses>2</NumberOfPasses>
+   <NumberOfGoals>4</NumberOfGoals>
+   <NumberOfYellowCards>4</NumberOfYellowCards>
+   <Birthday>
+    <Day>9</Day>
+    <Month>5</Month>
+    <Year>1991</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Fabian Lustenberger</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>28</TricotNr>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfGames>25</NumberOfGames>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+   <Birthday>
+    <Day>2</Day>
+    <Month>5</Month>
+    <Year>1988</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Alexander Baumjohann</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>9</TricotNr>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfGames>21</NumberOfGames>
+   <NumberOfPasses>2</NumberOfPasses>
+   <Birthday>
+    <Day>23</Day>
+    <Month>1</Month>
+    <Year>1987</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Valentin Stocker</Name>
+   <TricotNr>14</TricotNr>
+   <NumberOfGames>19</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Birthday>
+    <Day>12</Day>
+    <Month>4</Month>
+    <Year>1989</Year>
+   </Birthday>
+   <Position>Mittelfeld</Position>
+   <NumberOfGoals>1</NumberOfGoals>
+  </Player>
+  <Player>
+   <NumberOfGoals>14</NumberOfGoals>
+   <Name>Salomon Kalou</Name>
+   <TricotNr>11</TricotNr>
+   <NumberOfGames>27</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Position>Angriff</Position>
+   <Birthday>
+    <Day>5</Day>
+    <Month>8</Month>
+    <Year>1985</Year>
+   </Birthday>
+   <NumberOfPasses>2</NumberOfPasses>
+  </Player>
+  <Player>
+   <Position>Angriff</Position>
+   <NumberOfGoals>9</NumberOfGoals>
+   <NumberOfPasses>3</NumberOfPasses>
+   <Name>Vedad Ibisevic</Name>
+   <TricotNr>19</TricotNr>
+   <NumberOfGames>22</NumberOfGames>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+   <Birthday>
+    <Day>6</Day>
+    <Month>8</Month>
+    <Year>1984</Year>
+   </Birthday>
+   <NumberOfRedCards>1</NumberOfRedCards>
+  </Player>
+ </Team>
+ <Stadium>
+  <Name>Olympiastadion</Name>
+  <NumberOfSeats>74475</NumberOfSeats>
+  <Town>Berlin</Town>
+  <Country>Deutschland</Country>
+  <YearOfConstruction>1934</YearOfConstruction>
+ </Stadium>
+ <Stadium>
+  <Name>Allianz Arena</Name>
+  <NumberOfSeats>75000</NumberOfSeats>
+  <Town>Muenchen</Town>
+  <Country>Deutschland</Country>
+  <YearOfConstruction>2002</YearOfConstruction>
+ </Stadium>
+</Tournament>

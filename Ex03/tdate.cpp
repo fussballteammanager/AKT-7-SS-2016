@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <fstream>
 #include <algorithm>
-
+#include <ctime>
 #include "tdate.h"
 #include "ttools.h"
 

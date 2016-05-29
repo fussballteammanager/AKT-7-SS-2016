@@ -35,7 +35,8 @@ void TTournament::print()
 
     for(int i = 0; i < NumberOfStadiums; i++)
     {
-        cout << "- " << this->Stadium[i]->GetStName() << " (" << this->Stadium[i]->GetNumberOfSeats() << " Sitzplaetze) in " << this->Stadium[i]->GetTown() << "; " << this->Stadium[i]->GetCountry() << endl;
+        //cout << "- " << this->Stadium[i]->GetStName() << " (" << this->Stadium[i]->GetNumberOfSeats() << " Sitzplaetze) in " << this->Stadium[i]->GetTown() << "; " << this->Stadium[i]->GetCountry() << endl;
+        this->Stadium[i]->print();
     }
 
     cout << endl << "Teams:" << endl;
@@ -78,6 +79,8 @@ void TTournament::print()
 int TTournament::load(std::ifstream &ifs)
 {
     string line = TTools::ReadUnspaced(ifs);
+
+
     if (line == "<Tournament>")
     {
         while(ifs.good())
