@@ -1,5 +1,4 @@
 #include <iostream>
-#include "tplayer.h"
 #include "tteam.h"
 #include "ttournament.h"
 

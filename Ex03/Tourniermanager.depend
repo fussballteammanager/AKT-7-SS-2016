@@ -143,114 +143,88 @@
 	"tstadium.h"
 	"ttournament.h"
 
-1463774271 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/main.cpp
+1464558736 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/main.cpp
 	<iostream>
-	"tplayer.h"
 	"tteam.h"
 	"ttournament.h"
 
-1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tplayer.h
-	"tdate.h"
-	"tdate.h"
+1464278328 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tplayer.h
 	<string>
+	"tdate.h"
 
-1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tdate.h
-	<string>
+1464278326 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tdate.h
 
-1463773127 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tteam.h
+1464278328 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tteam.h
 	"tscore.h"
 	"tplayer.h"
 	<string>
 
-1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tscore.h
+1464278328 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tscore.h
 
-1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttournament.h
-	<string>
-	<iostream>
-	<fstream>
+1464278328 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttournament.h
 	"tteam.h"
 	"tstadium.h"
 
-1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tstadium.h
+1464278328 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tstadium.h
 	<string>
 
-1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tdate.cpp
+1464278524 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tdate.cpp
 	<iostream>
-	<string>
 	<iomanip>
+	<fstream>
+	<algorithm>
 	<ctime>
-	<fstream>
-	<cstdio>
-	<algorithm>
 	"tdate.h"
-	"ttournament.h"
 	"ttools.h"
 
-1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttools.h
+1464278328 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttools.h
 	<string>
 
-1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tplayer.cpp
+1464278326 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tplayer.cpp
 	<iostream>
-	<string>
 	<fstream>
-	<cstdio>
 	<algorithm>
 	"tplayer.h"
-	"ttournament.h"
 	"ttools.h"
 
-1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tscore.cpp
+1464278328 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tscore.cpp
 	<iostream>
 	"tscore.h"
 
-1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tstadium.cpp
-	"tstadium.h"
+1464278328 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tstadium.cpp
 	<string>
 	<iostream>
 	<fstream>
-	<cstdio>
 	<algorithm>
-	"tdate.h"
-	"tteam.h"
-	"tplayer.h"
 	"tstadium.h"
-	"ttournament.h"
 	"ttools.h"
 
-1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tteam.cpp
+1464279928 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/tteam.cpp
 	<iomanip>
-	"tteam.h"
 	<string>
 	<iostream>
 	<fstream>
 	<cstdio>
-	<algorithm>
-	"tdate.h"
 	"tteam.h"
-	"tplayer.h"
-	"tstadium.h"
-	"ttournament.h"
 	"ttools.h"
 
-1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttime.cpp
+1464278328 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttime.cpp
 	<iostream>
 	<iomanip>
 	<ctime>
 	"ttime.h"
 
-1463772712 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttime.h
+1464278328 /home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttime.h
 
-1463772712 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttools.cpp
-	<string>
-	<iostream>
-	<iomanip>
-	<fstream>
-	<cstdio>
+1464279288 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttools.cpp
 	<algorithm>
-	"tdate.h"
-	"tteam.h"
-	"tplayer.h"
-	"tstadium.h"
+	<fstream>
+	"ttools.h"
+
+1464281288 source:/home/alien/Beuth/CppRepo/AKT-7-SS-2016/Ex03/ttournament.cpp
+	<iomanip>
+	<iostream>
+	<fstream>
 	"ttournament.h"
 	"ttools.h"
 
