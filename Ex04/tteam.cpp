@@ -39,43 +39,42 @@ TTeam::TTeam(string name, string trainer)
 
 TTeam::~TTeam()
 {
-    for (int i = 0; i < MAXPLAYER; i++){
+    for (int i = 0; i < NumberOfPlayers; i++){
         delete this->Players[i];
     }
 }
 
 bool TTeam::addPlayer(TPlayer Player)
 {
-    bool ret = false;
-    for (int i = 0; i < MAXPLAYER-1; i++){
-        if (Players[i] == NULL){
-            Players[i] = new TPlayer;
-            *Players[i] = Player;
-            ret = true;
-            break;
-        }
-    }
-    if (ret){
+    if ( NumberOfPlayers < MAXPLAYER )
+    {
+        Players[NumberOfPlayers] = new TPlayer;
+         /* copy player class object into space of TPlayer */
+        *Players[NumberOfPlayers] = Player;
         NumberOfPlayers++;
+        return true;
     }
-    return ret;
+    else
+        std::cout << "Team reached maximum of " << MAXPLAYER
+            << "players. Kick one out before adding a new :) " << std::endl;
+
+    return false;
 }
 
 bool TTeam::removePlayer(TPlayer &Player)
 {
-    for (int i = 0; i < MAXPLAYER; i++){
-        if (this->Players[i] != NULL){
-            if (this->Players[i]->Getname() == Player.Getname()){
-                delete this->Players[i];
-                this->Players[i] = this->Players[NumberOfPlayers-1];
-                this->Players[NumberOfPlayers-1] = NULL;
-                NumberOfPlayers--;
-            }
-            else
-                return false;
+    for (int i = 0; i < NumberOfPlayers; i++){
+        if ( this->Players[i]->Getname() == Player.Getname() )
+        {
+            delete this->Players[i];
+             /* replace with last in list */
+            this->Players[i] = this->Players[NumberOfPlayers-1];
+            this->Players[NumberOfPlayers-1] = NULL;
+            NumberOfPlayers--;
+            return true;
         }
     }
-    return true;
+    return false;
 }
 
 void TTeam::print()
@@ -109,6 +108,7 @@ void TTeam::print()
                 << setfill(' ') << endl;
             }
         }
+        cout << "------------------------|----|--------|------|-------|------|------|-----------" << endl << endl;
     }
 }
 
