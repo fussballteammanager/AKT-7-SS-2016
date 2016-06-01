@@ -30,7 +30,6 @@
 **/bin/Release/
 
 # Codeblocks
-*.layout
-*.depend
-*.layout
+.layout
+.depend
 
