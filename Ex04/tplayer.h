@@ -24,6 +24,7 @@ class TPlayer
             unsigned int NumberOfPasses, unsigned int NumberOfGames, unsigned int NumberOfYellowCards,
             unsigned int NumberOfRedCards, unsigned int Day, unsigned int Month, unsigned int Yea);
         virtual ~TPlayer();
+
         std::string Getname() { return name; }
         void Setname(std::string val) { name = val; }
         std::string Getposition() { return position; }

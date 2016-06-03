@@ -51,9 +51,9 @@ int main()
 
     cout << "\n\nPunkte fuer den Torstand S1 (";
     S1.print();
-    cout << ")           " << S1.getPointsHome() << ":" << S1.getPointsGuest();
+    cout << ")          " << S1.getPointsHome() << ":" << S1.getPointsGuest();
     cout << "\nPunkte fuer den Torstand S2 (";   S2.print();
-    cout << ")           " << S2.getPointsHome() << ":" << S2.getPointsGuest() << "\n";
+    cout << ")          " << S2.getPointsHome() << ":" << S2.getPointsGuest() << "\n";
 
    return 0;
 }

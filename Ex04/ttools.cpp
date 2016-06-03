@@ -11,7 +11,9 @@ TTools::TTools()
 
 TTools::~TTools()
 {
-    //dtor
+    #ifdef DEBUG
+        std::cout << "Destr: TTools" << std::endl;
+    #endif
 }
 
 bool TTools::strcontain(std::string in, std::string tag)

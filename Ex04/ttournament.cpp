@@ -26,19 +26,25 @@ TTournament::TTournament(string DName)
 
 TTournament::~TTournament()
 {
-    //dtor
+    #ifdef DEBUG
+        cout << "TTournament destructor" << endl;
+    #endif
+    for ( int i = 0; i < NumberOfTeams; i++ )
+        delete this->Team[i];
+    for ( int i = 0; i < NumberOfStadiums; i++ )
+        delete this->Stadium[i];
 }
 
 void TTournament::print()
 {
     cout << "Turnier: " << TName << endl;
 
-     cout << endl << "Stadien:" << endl;
+    cout << endl << "Stadien:" << endl;
     for( int i = 0; i < NumberOfStadiums; i++ )
         this->Stadium[i]->print();
 
     cout << endl << "Teams:" << endl;
-    for(int i = 0; i < this->GetNumberOfTeams(); i++)
+    for(int i = 0; i < NumberOfTeams; i++)
         this->Team[i]->print();
 }
 
@@ -56,14 +62,11 @@ int TTournament::load( std::ifstream &ifs )
             break;
         }
         else if ( ifs.eof() )
-        {
             return 1;
-        }
     }
 
-    while(ifs.good())
+    while( ifs.good() )
     {
-
         line = TTools::ReadUnspaced(ifs);
 
         if ( TTools::strcontain( line,"<Team>" ) )
@@ -115,4 +118,3 @@ int TTournament::load( std::ifstream &ifs )
 
     return 0;
 }
-

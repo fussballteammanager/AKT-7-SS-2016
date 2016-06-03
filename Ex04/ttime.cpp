@@ -50,5 +50,6 @@ short TTime::getMinute()
 
 void TTime::print()
 {
-    cout << setw(2) << setfill('0') << this->hour << ":" << setw(2) << setfill('0') << this->minute;
+    cout << setw(2) << setfill('0') << this->hour
+        << ":" << setw(2) << setfill('0') << this->minute;
 }

@@ -24,6 +24,8 @@ class TDate
     public:
         TDate();
         TDate(short day, short month, short year);
+        ~TDate();
+
         void setDate(short day, short month, short year);
         void setCurrentDate();
         short getDay();

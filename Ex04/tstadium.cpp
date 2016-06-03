@@ -28,7 +28,9 @@ TStadium::TStadium(string name, string town, string country, int seats, int year
 
 TStadium::~TStadium()
 {
-    //dtor
+    #ifdef DEBUG
+        cout << "Destr: Tstadium" << endl;
+    #endif
 }
 
 int TStadium::load(std::ifstream &ifs)

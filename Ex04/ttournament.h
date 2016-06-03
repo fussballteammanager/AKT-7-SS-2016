@@ -14,6 +14,7 @@ class TTournament
     public:
         TTournament(std::string DName);
         virtual ~TTournament();
+
         std::string GetTName() { return TName; }
         void SetTName(std::string val) { TName = val; }
         int GetNumberOfTeams() { return NumberOfTeams; }
@@ -28,6 +29,7 @@ class TTournament
         void SetNumberOfMatches(int val) { NumberOfMatches = val; }
         int load(std::ifstream &ifs);
         void print();
+
     protected:
     private:
         std::string TName;

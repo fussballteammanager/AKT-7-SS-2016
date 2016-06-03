@@ -19,6 +19,13 @@ TDate::TDate(short day, short month, short year)
     TDate::setDate(day, month, year);
 }
 
+TDate::~TDate()
+{
+    #ifdef DEBUG
+        cout << "Destr: TDate" << endl;
+    #endif
+}
+
 void TDate::setDate(short day, short month, short year)
 {
     if ( day > 0 and day <=31 and month > 0 and month <=12 and
@@ -58,7 +65,9 @@ short TDate::getYear()
 
 void TDate::print()
 {
-    cout << setw(2) << setfill('0') << this->day << "." << setw(2) << setfill('0') <<  this->month << "." << this->year;
+    cout << setw(2) << setfill('0') << day
+    << "." << setw(2) << month
+    << "."<<  setw(4) << year;
 }
 
 int TDate::load(std::ifstream &ifs)

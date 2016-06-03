@@ -9,8 +9,6 @@
 
 using namespace std;
 
-int TTeam::NumberOfPlayers = 0;
-
 TTeam::TTeam()
 {
     this->name = "";
@@ -39,9 +37,11 @@ TTeam::TTeam(string name, string trainer)
 
 TTeam::~TTeam()
 {
-    for (int i = 0; i < NumberOfPlayers; i++){
+    #ifdef DEBUG
+        cout << "Destr: TTeam" << endl;
+    #endif
+    for ( int i = 0; i < NumberOfPlayers; i++ )
         delete this->Players[i];
-    }
 }
 
 bool TTeam::addPlayer(TPlayer Player)
@@ -79,35 +79,16 @@ bool TTeam::removePlayer(TPlayer &Player)
 
 void TTeam::print()
 {
-    int j = 1;
     cout << this->Getname() << endl << this->Gettrainer() << endl << endl;
-    for (int i = 0; i < MAXPLAYER; i++){
-        if (Players[i] != NULL){
-            j++;
-        }
-    }
-    if (j == 1){
+
+    if ( NumberOfPlayers == 0 )
         cout << "Keine Spieler!" << endl;
-    }else{
+    else
+    {
         cout << "Spieler                 | Nr | Spiele | Tore | Vorl. | Gelb |  Rot | Geburtstag" << endl;
         cout << "------------------------|----|--------|------|-------|------|------|-----------" << endl;
-        for (int i = 0; i < MAXPLAYER; i++){
-            if (Players[i] != NULL){
-                cout.setf(ios::left, ios::adjustfield);
-                cout << setw(23) << setfill(' ') << Players[i]->Getname();
-                cout.setf(ios::right, ios::adjustfield);
-                cout << " | " << setw(2) << Players[i]->GettricotNr()
-                << " | " << setw(6) << Players[i]->GetNumberOfGames()
-                << " | " << setw(4) << Players[i]->GetNumberOfGoals()
-                << " | " << setw(5) << Players[i]->GetNumberOfPasses()
-                << " | " << setw(4) << Players[i]->GetNumberOfYellowCards()
-                << " | " << setw(4) << Players[i]->GetNumberOfRedCards()
-                << " | " << setw(2) << setfill('0') << Players[i]->GetBirthday().getDay()
-                << "." << setw(2) << Players[i]->GetBirthday().getMonth()
-                << "."<<  setw(4) << Players[i]->GetBirthday().getYear()
-                << setfill(' ') << endl;
-            }
-        }
+        for (int i = 0; i < NumberOfPlayers; i++)
+            Players[i]->print();
         cout << "------------------------|----|--------|------|-------|------|------|-----------" << endl << endl;
     }
 }
@@ -134,6 +115,10 @@ int TTeam::load(std::ifstream &ifs)
             this->Players[NumberOfPlayers] = new TPlayer;
             this->Players[NumberOfPlayers]->load(ifs);
             NumberOfPlayers++;
+            #ifdef DEBUG
+                cout << "Team: " << this->name << "Number player: "
+                    << NumberOfPlayers << endl;
+            #endif
 
         }
         else if( TTools::strcontain( line,"<Name>" ) )

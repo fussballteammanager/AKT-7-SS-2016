@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -10,7 +11,7 @@ using namespace std;
 int main()
 {
     TTournament Bundesliga("fussball.xml");
-//    vector<TEvent *> Spielverlauf;
+ //   vector<TEvent *> Spielverlauf;
     TDate Spieltag(23, 4, 2016);
 
     Bundesliga.print();
@@ -49,7 +50,7 @@ int main()
    cout << endl;
 #endif
 
-#if 0 /* add and delete player test */
+#if 0 /* tplayer test: add and delete */
     TPlayer Jarstein ("Rune Jarstein", "Torwart", 22, 0, 0, 25, 1, 0, 29, 9, 1984);
     TPlayer Kraft ("Thomas Kraft", "Torwart", 1, 0, 0, 5, 0, 0, 22, 7, 1988);
     TPlayer Plattenhardt("Marvin Plattenhardt", "Abwehr", 21, 2, 5, 29, 4, 0, 26, 1, 1992);

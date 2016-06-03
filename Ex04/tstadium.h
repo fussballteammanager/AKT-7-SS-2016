@@ -9,6 +9,7 @@ class TStadium
         TStadium();
         TStadium(std::string name, std::string town, std::string country, int seats, int year);
         ~TStadium();
+
         std::string GetStName() { return StName; }
         void SetStName(std::string val) { StName = val; }
         std::string GetTown() { return Town; }

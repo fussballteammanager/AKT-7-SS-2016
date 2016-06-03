@@ -16,13 +16,14 @@ class TTeam
         unsigned int NumberOfGames;
         TScore Goals;
         int NumberOfPoints;
-        static int NumberOfPlayers;
+        int NumberOfPlayers;
         TPlayer *Players[MAXPLAYER];
 
     public:
         TTeam();
         TTeam(std::string name, std::string trainer);
         virtual ~TTeam();
+
         std::string Getname() { return name; }
         void Setname(std::string val) { name = val; }
         std::string Gettrainer() { return trainer; }
@@ -33,7 +34,7 @@ class TTeam
         void SetGoals(TScore val) { Goals = val; }
         int GetNumberOfPoints() { return NumberOfPoints; }
         void SetNumberOfPoints(int val) { NumberOfPoints = val; }
-        static int GetNumberOfPlayers() { return NumberOfPlayers; }
+        int GetNumberOfPlayers() { return NumberOfPlayers; }
         TPlayer *GetPlayers(int index) { return Players[index]; }
         void SetPlayers(TPlayer *val, int index) { Players[index] = val; }
         int load(std::ifstream &ifs);

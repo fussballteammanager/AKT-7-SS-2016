@@ -1,3 +1,4 @@
+#include <iomanip>
 #include <iostream>
 #include <fstream>
 #include <algorithm>
@@ -38,11 +39,25 @@ TPlayer::TPlayer(string name, string position, short tricotNr, unsigned int Numb
 
 TPlayer::~TPlayer()
 {
-    //dtor
+    #ifdef DEBUG
+        cout << "Destr: TPlayer" << endl;
+    #endif
 }
 
-void TPlayer::print(){
-    cout << this->Getname() << " (Trikot-Nr. " << this->GettricotNr() << ")";
+void TPlayer::print()
+{
+    cout.setf(ios::left, ios::adjustfield);
+    cout << setw(23) << setfill(' ') << name;
+    cout.setf(ios::right, ios::adjustfield);
+    cout << " | " << setw(2) << tricotNr
+         << " | " << setw(6) << NumberOfGames
+         << " | " << setw(4) << NumberOfGoals
+         << " | " << setw(5) << NumberOfPasses
+         << " | " << setw(4) << NumberOfYellowCards
+         << " | " << setw(4) << NumberOfRedCards
+         << " | ";
+    GetBirthday().print();
+    cout  << setfill(' ') << endl;
 }
 
 int TPlayer::load(std::ifstream &ifs)
