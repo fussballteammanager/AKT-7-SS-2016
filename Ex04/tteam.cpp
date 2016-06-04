@@ -79,7 +79,7 @@ bool TTeam::removePlayer(TPlayer &Player)
 
 void TTeam::print()
 {
-    cout << this->Getname() << endl << this->Gettrainer() << endl << endl;
+    cout << this->GetName() << endl << this->Gettrainer() << endl << endl;
 
     if ( NumberOfPlayers == 0 )
         cout << "Keine Spieler!" << endl;

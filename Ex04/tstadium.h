@@ -5,6 +5,13 @@
 
 class TStadium
 {
+    private:
+        std::string StName;
+        std::string Town;
+        std::string Country;
+        int NumberOfSeats;
+        int YearOfConstruction;
+
     public:
         TStadium();
         TStadium(std::string name, std::string town, std::string country, int seats, int year);
@@ -22,13 +29,8 @@ class TStadium
         void SetYearOfConstruction(int val) { YearOfConstruction = val; }
         int load(std::ifstream &ifs);
         void print();
+
     protected:
-    private:
-        std::string StName;
-        std::string Town;
-        std::string Country;
-        int NumberOfSeats;
-        int YearOfConstruction;
 };
 
 #endif // TSTADIUM_H

@@ -11,6 +11,14 @@
 
 class TTournament
 {
+    private:
+        std::string TName;
+        int NumberOfTeams;
+        TTeam *Team[MAXTEAMS];
+        int NumberOfStadiums;
+        TStadium *Stadium[MAXSTADIUMS];
+        int NumberOfMatches;
+
     public:
         TTournament(std::string DName);
         virtual ~TTournament();
@@ -19,7 +27,7 @@ class TTournament
         void SetTName(std::string val) { TName = val; }
         int GetNumberOfTeams() { return NumberOfTeams; }
         void SetNumberOfTeams(int val) { NumberOfTeams = val; }
-        TTeam *getTeam(int index) { return Team[index]; }
+        TTeam *GetTeam(int index) { return Team[index]; }
         void setTeam(TTeam val, int index) { *Team[index] = val; }
         int GetNumberOfStadiums() { return NumberOfStadiums; }
         void SetNumberOfStadiums(int val) { NumberOfStadiums = val; }
@@ -31,14 +39,6 @@ class TTournament
         void print();
 
     protected:
-    private:
-        std::string TName;
-        int NumberOfTeams;
-        TTeam *Team[MAXTEAMS];
-        int NumberOfStadiums;
-        TStadium *Stadium[MAXSTADIUMS];
-        int NumberOfMatches;
-
 };
 
 #endif // TTOURNAMENT_H

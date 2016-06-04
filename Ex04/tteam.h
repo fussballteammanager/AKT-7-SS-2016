@@ -24,7 +24,7 @@ class TTeam
         TTeam(std::string name, std::string trainer);
         virtual ~TTeam();
 
-        std::string Getname() { return name; }
+        std::string GetName() { return name; }
         void Setname(std::string val) { name = val; }
         std::string Gettrainer() { return trainer; }
         void Settrainer(std::string val) { trainer = val; }
@@ -35,7 +35,7 @@ class TTeam
         int GetNumberOfPoints() { return NumberOfPoints; }
         void SetNumberOfPoints(int val) { NumberOfPoints = val; }
         int GetNumberOfPlayers() { return NumberOfPlayers; }
-        TPlayer *GetPlayers(int index) { return Players[index]; }
+        TPlayer *GetPlayer(int index) { return Players[index]; }
         void SetPlayers(TPlayer *val, int index) { Players[index] = val; }
         int load(std::ifstream &ifs);
         bool addPlayer(TPlayer Player);
