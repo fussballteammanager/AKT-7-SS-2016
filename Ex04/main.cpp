@@ -1,12 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cstddef>
 
-using namespace std;
 
 #include "tdate.h"
 #include "ttournament.h"
 #include "tevent.h"
+
+#if !defined(nullptr)
+    #define nullptr NULL
+#endif
+
+using namespace std;
 
 int main()
 {
@@ -29,7 +35,6 @@ int main()
 
    Spielverlauf.push_back(new TFoul        ( 7, Bundesliga.GetTeam(0)->GetPlayer( 5),
                                                 Bundesliga.GetTeam(1)->GetPlayer( 9)));
-#if 0 /* Ex04 main.c */
    Spielverlauf.push_back(new TFreeKick    ( 7, Bundesliga.GetTeam(1)->GetPlayer( 9),
                                                 26));
    Spielverlauf.push_back(new TFreeKick    (25, Bundesliga.GetTeam(0)->GetPlayer( 7),
@@ -49,7 +54,6 @@ int main()
    Spielverlauf.push_back(new TGoal        (85, Bundesliga.GetTeam(0)->GetPlayer(14),
                                                 Bundesliga.GetTeam(0)->GetPlayer(11),
                                                 false));
-#endif
 
    cout << "Spiel zwischen "
         << Bundesliga.GetTeam(0)->GetName() << " und "
