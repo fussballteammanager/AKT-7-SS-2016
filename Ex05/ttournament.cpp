@@ -87,6 +87,15 @@ int TTournament::load( std::ifstream &ifs )
             this->Stadium[NumberOfStadiums]->load(ifs);
             NumberOfStadiums++;
         }
+        else if ( TTools::strcontain( line,"<Match>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            this->Matches[NumberOfMatches] = new TMatch;
+            this->Matches[NumberOfMatches]->load(ifs);
+            NumberOfMatches++;
+        }
         else if (  TTools::strcontain(line,"<Name>" ) )
         {
             #ifdef DEBUG

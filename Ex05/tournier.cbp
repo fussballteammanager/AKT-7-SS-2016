@@ -41,6 +41,8 @@
 		<Unit filename="tdate.h" />
 		<Unit filename="tevent.cpp" />
 		<Unit filename="tevent.h" />
+		<Unit filename="tmatch.cpp" />
+		<Unit filename="tmatch.h" />
 		<Unit filename="tplayer.cpp" />
 		<Unit filename="tplayer.h" />
 		<Unit filename="tscore.cpp" />

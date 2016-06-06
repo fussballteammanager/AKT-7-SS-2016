@@ -3,6 +3,7 @@
 #include <fstream>
 #include <algorithm>
 #include <ctime>
+
 #include "tdate.h"
 #include "ttools.h"
 
@@ -11,6 +12,9 @@ using namespace std;
 
 TDate::TDate()
 {
+    #ifdef DEBUG
+        cout << "Constr: TDate" << endl;
+    #endif
     TDate::setCurrentDate();
 }
 
@@ -78,6 +82,13 @@ int TDate::load(std::ifstream &ifs)
         line = TTools::ReadUnspaced(ifs);
 
         if ( TTools::strcontain( line, "</Birthday>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            return 1;
+        }
+        else if ( TTools::strcontain( line, "</Date>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;

@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 
+//#include "tmatch.h"
 #include "tplayer.h"
 
 class TEvent
@@ -13,7 +14,7 @@ class TEvent
         TPlayer *Player;
 
     public:
-        TEvent();
+        TEvent() : MinuteOfPlay(0), Player(0) {}
         TEvent( int Minute, TPlayer *Player) :MinuteOfPlay(Minute), Player(Player)
         {
             std::cout << "Constr: TEvent" << std::endl;
@@ -27,7 +28,9 @@ class TEvent
         void SetMinuteOfPlay(int val) { MinuteOfPlay = val; }
         virtual void SetPlayer( TPlayer *RefPlayer ) {  Player = RefPlayer; }
         virtual TPlayer* GetPlayer() { return Player; }
+        virtual int load(std::ifstream &ifs) { return 0; }
         virtual void print() {}
+
     protected:
 
 };
@@ -51,6 +54,7 @@ class TFoul: public TEvent
 
         void SetPlayer( TPlayer *Player) { FouledPlayer = Player; }
         TPlayer* GetPlayer() { return FouledPlayer; }
+        int load(std::ifstream &ifs);
         void print();
 };
 

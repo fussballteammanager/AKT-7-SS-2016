@@ -3,7 +3,7 @@
 
 #include <string>
 
-//#define DEBUG
+#define DEBUG
 
 class TTools
 {

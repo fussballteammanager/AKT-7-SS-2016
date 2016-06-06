@@ -3,11 +3,12 @@
 #include <fstream>
 #include <iostream>
 
-#include "tplayer.h"
 #include "tevent.h"
+#include "tplayer.h"
 #include "ttools.h"
 
 using namespace std;
+
 
 /* ********************* TFoul **************************** */
 void TFoul::print()
@@ -23,6 +24,13 @@ void TFoul::print()
             << TEvent::GetPlayer()->Getname() << endl;
     }
 }
+
+int TFoul::load(std::ifstream &ifs)
+{
+    cout << "WAS HERE **********************************************" << endl;
+    return 0;
+}
+
 
 /* ********************* TFreeKick **************************** */
 void TFreeKick::print()

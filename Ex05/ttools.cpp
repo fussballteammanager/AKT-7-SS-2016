@@ -62,16 +62,16 @@ std::string TTools::ReadUnspaced(std::ifstream &in)
     unsigned int pos = line.find_last_of('>');
     if ( pos > 0 and ( pos+1 != line.length() ) )
     {
-        #ifdef DEBUG
-            std::cout << "Last letter has to be removed, length of string: " << line.length() << " Position of last bracket: " << pos+1 <<  std::endl;
-        #endif
+       //#ifdef DEBUG
+       //     std::cout << "Last letter has to be removed, length of string: " << line.length() << " Position of last bracket: " << pos+1 <<  std::endl;
+       // #endif
 
         while ( line.length() > pos+1)
             line.erase( line.end()-1 );
 
-        #ifdef DEBUG
-            std::cout << "New length: " << line.length() << " String: " << line <<  std::endl;
-        #endif
+        //#ifdef DEBUG
+        //    std::cout << "New length: " << line.length() << " String: " << line <<  std::endl;
+        //#endif
     }
 
 
