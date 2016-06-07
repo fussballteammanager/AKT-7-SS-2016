@@ -73,6 +73,17 @@ int TMatch::load(std::ifstream &ifs)
             #endif
             this->Time.load(ifs);
         }
+        else if( TTools::strcontain( line,"<HomeTeam>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            std::string tag1 = "<HomeTeam>",tag2 = "</HomeTeam>";
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
+            /* Insert pointer to a team !!! */
+           // this-> = line;
+        }
         /* insert pointer to teamnames */
         /* ... */
 
