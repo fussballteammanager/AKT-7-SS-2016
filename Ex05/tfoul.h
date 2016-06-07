@@ -7,7 +7,7 @@
 #include "tevent.h"
 
 
-class TFoul: public TEvent, public TMatch
+class TFoul: public TEvent
 {
     private:
         TPlayer *FouledPlayer;
