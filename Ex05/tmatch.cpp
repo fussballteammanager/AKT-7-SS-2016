@@ -73,6 +73,41 @@ int TMatch::load(std::ifstream &ifs)
             #endif
             this->Time.load(ifs);
         }
+        else if ( TTools::strcontain( line,"<Foul>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Freekick>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Card>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Substitution>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Penalty>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
         else if( TTools::strcontain( line,"<HomeTeam>" ) )
         {
             #ifdef DEBUG
@@ -86,7 +121,39 @@ int TMatch::load(std::ifstream &ifs)
         }
         /* insert pointer to teamnames */
         /* ... */
-
+        else if( TTools::strcontain( line,"<GuestTeam>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            std::string tag1 = "<GuestTeam>",tag2 = "</GuestTeam>";
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
+            /* Insert pointer to a team !!! */
+            //this->SetGuestTeam(line);
+        }
+        else if( TTools::strcontain( line,"<Stadium>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            std::string tag1 = "<Stadium>",tag2 = "</Stadium>";
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
+            /* Insert pointer to a team !!! */
+            //this->SetStadium(line);
+        }
+        else if( TTools::strcontain( line,"<Referee>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            std::string tag1 = "<Referee>",tag2 = "</Referee>";
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
+            /* Insert pointer to a team !!! */
+            this->SetReferee(line);
+        }
         else if (  TTools::strcontain(line,"<PlayerTricotNr Team=\"Home\">" ) )
         {
             #ifdef DEBUG
@@ -97,7 +164,23 @@ int TMatch::load(std::ifstream &ifs)
             line = TTools::tagremove(line, tag2);
             /* add correct player to vector :) push_back */
     //        HomePlayer.push_back()
-            std::cout <<  atoi(line.c_str()) << std::endl;
+            #ifdef DEBUG
+                std::cout <<  atoi(line.c_str()) << std::endl;
+            #endif // DEBUG
+        }
+        else if (  TTools::strcontain(line,"<PlayerTricotNr Team=\"Guest\">" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            std::string tag1 = "<PlayerTricotNr Team=\"Guest\">",tag2 = "</PlayerTricotNr>";
+            line = TTools::tagremove(line, tag1);
+            line = TTools::tagremove(line, tag2);
+            /* add correct player to vector :) push_back */
+    //        HomePlayer.push_back()
+            #ifdef DEBUG
+                std::cout <<  atoi(line.c_str()) << std::endl;
+            #endif // DEBUG
         }
 //        else if ( TTools::strcontain( line,"<Foul>" ) )
 //        {
