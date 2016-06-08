@@ -1,6 +1,7 @@
 #ifndef TMATCH_H
 #define TMATCH_H TMATCH_H
 
+//#include "ttournament.h" // now via 'void*'
 #include "tteam.h"
 #include "tevent.h"
 #include "tscore.h"
@@ -8,6 +9,7 @@
 #include "tplayer.h"
 #include "ttime.h"
 #include "tstadium.h"
+
 
 #include <vector>
 #include <string>
@@ -55,7 +57,7 @@ class TMatch
         void SetReferee(std::string val) { Referee = val; }
         TStadium *GetStadium() { return Stadium; }
         void SetStadium(TStadium *val) { Stadium = val; }
-        int load(std::ifstream &ifs);
+        int load(std::ifstream &ifs, void* );
         void print();
 };
 

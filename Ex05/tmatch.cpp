@@ -4,6 +4,15 @@
 
 #include "tmatch.h"
 #include "ttools.h"
+#include "ttournament.h"
+
+//#include "tgoal.h"
+//#include "tpenalty.h"
+//#include "tfreekick.h"
+//#include "tsubstitution.h"
+//#include "tfoul.h"
+
+using namespace std;
 
 TMatch::TMatch()
 {
@@ -45,8 +54,12 @@ void SubstituteGuestPlayer( TPlayer* exhaustedPlayer, TPlayer* replacementPlayer
 }
 
 
-int TMatch::load(std::ifstream &ifs)
+int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does not need ttournament.h header
 {
+    int i;
+    // cast pointer back from void*
+    TTournament *Tournament = (TTournament*)ptr;
+
     string line;
     while(ifs.good())
     {
@@ -73,60 +86,31 @@ int TMatch::load(std::ifstream &ifs)
             #endif
             this->Time.load(ifs);
         }
-        else if ( TTools::strcontain( line,"<Foul>" ) )
-        {
-            #ifdef DEBUG
-                cout << line << endl;
-            #endif
-            //this->Time.load(ifs);
-        }
-        else if ( TTools::strcontain( line,"<Freekick>" ) )
-        {
-            #ifdef DEBUG
-                cout << line << endl;
-            #endif
-            //this->Time.load(ifs);
-        }
-        else if ( TTools::strcontain( line,"<Card>" ) )
-        {
-            #ifdef DEBUG
-                cout << line << endl;
-            #endif
-            //this->Time.load(ifs);
-        }
-        else if ( TTools::strcontain( line,"<Substitution>" ) )
-        {
-            #ifdef DEBUG
-                cout << line << endl;
-            #endif
-            //this->Time.load(ifs);
-        }
-        else if ( TTools::strcontain( line,"<Penalty>" ) )
-        {
-            #ifdef DEBUG
-                cout << line << endl;
-            #endif
-            //this->Time.load(ifs);
-        }
         else if( TTools::strcontain( line,"<HomeTeam>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            std::string tag1 = "<HomeTeam>",tag2 = "</HomeTeam>";
+            string tag1 = "<HomeTeam>",tag2 = "</HomeTeam>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
+            for ( i = 0; i < Tournament->GetNumberOfTeams(); i++ )
+                if ( Tournament->GetTeam(i)->GetName() == line )
+                {
+                    cout << "found team equal: " << Tournament->GetTeam(i)->GetName() << " to " << line << endl;
+                    this->HomeTeam = Tournament->GetTeam(i);
+                    cout << "Home team pointer points to: " << this->HomeTeam->GetName() << endl;
+                }
+
             /* Insert pointer to a team !!! */
            // this-> = line;
         }
-        /* insert pointer to teamnames */
-        /* ... */
         else if( TTools::strcontain( line,"<GuestTeam>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            std::string tag1 = "<GuestTeam>",tag2 = "</GuestTeam>";
+            string tag1 = "<GuestTeam>",tag2 = "</GuestTeam>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
             /* Insert pointer to a team !!! */
@@ -137,7 +121,7 @@ int TMatch::load(std::ifstream &ifs)
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            std::string tag1 = "<Stadium>",tag2 = "</Stadium>";
+            string tag1 = "<Stadium>",tag2 = "</Stadium>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
             /* Insert pointer to a team !!! */
@@ -182,18 +166,45 @@ int TMatch::load(std::ifstream &ifs)
                 std::cout <<  atoi(line.c_str()) << std::endl;
             #endif // DEBUG
         }
-//        else if ( TTools::strcontain( line,"<Foul>" ) )
-//        {
-//            #ifdef DEBUG
-//                cout << line << endl;
-//            #endif
-//            this->Events.push_back(new TFoul);
+            else if ( TTools::strcontain( line,"<Foul>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Events.push_back(new TFoul);
 //            this->Events.at(Events.size()-1)->load(ifs);
-//        }
-
-    /* continue with events !!! */
-
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Freekick>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Card>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Substitution>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
+        else if ( TTools::strcontain( line,"<Penalty>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            //this->Time.load(ifs);
+        }
     }
+
     return 0;
 }
 

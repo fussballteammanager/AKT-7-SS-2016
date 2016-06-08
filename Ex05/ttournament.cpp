@@ -4,6 +4,7 @@
 
 #include "ttournament.h"
 #include "ttools.h"
+#include "tmatch.h"
 
 using namespace std;
 
@@ -93,7 +94,7 @@ int TTournament::load( std::ifstream &ifs )
                 cout << line << endl;
             #endif
             this->Matches[NumberOfMatches] = new TMatch;
-            this->Matches[NumberOfMatches]->load(ifs);
+            this->Matches[NumberOfMatches]->load(ifs, this);
             NumberOfMatches++;
         }
         else if (  TTools::strcontain(line,"<Name>" ) )

@@ -20,8 +20,8 @@ void TFoul::print()
 int TFoul::load(std::ifstream &ifs, TMatch* Match)
 {
     cout << "WAS HERE **********************************************" << endl;
-    TTeam *team;
-    team =  Match->GetHomeTeam();
+//    TTeam *team;
+//    team =  Match->GetHomeTeam();
 
     return 0;
 }
