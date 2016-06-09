@@ -10,9 +10,19 @@ using namespace std;
 
 TTournament::TTournament(string DName)
 {
+    int i;
+    TName = "";
     NumberOfTeams = 0;
     NumberOfStadiums = 0;
     NumberOfMatches = 0;
+
+    for ( i = 0; i < MAXTEAMS; i++)
+        Team[i] = NULL;
+    for ( i = 0; i < MAXMATCHES; i++)
+        Matches[i] = NULL;
+    for ( i = 0; i < MAXSTADIUMS; i++)
+        Stadium[i] = NULL;
+
     std::ifstream ifs, &r_ifs = ifs;
     ifs.open(DName.c_str(), std::ifstream::in);
     if(!ifs.is_open())
@@ -94,7 +104,7 @@ int TTournament::load( std::ifstream &ifs )
                 cout << line << endl;
             #endif
             this->Matches[NumberOfMatches] = new TMatch;
-            this->Matches[NumberOfMatches]->load(ifs, this);
+            this->Matches[NumberOfMatches]->load( ifs, Team, Stadium );
             NumberOfMatches++;
         }
         else if (  TTools::strcontain(line,"<Name>" ) )

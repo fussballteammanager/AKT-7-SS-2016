@@ -54,11 +54,9 @@ void SubstituteGuestPlayer( TPlayer* exhaustedPlayer, TPlayer* replacementPlayer
 }
 
 
-int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does not need ttournament.h header
+int TMatch::load(std::ifstream &ifs, TTeam **Team, TStadium **StadiumN )
 {
     int i;
-    // cast pointer back from void*
-    TTournament *Tournament = (TTournament*)ptr;
 
     string line;
     while(ifs.good())
@@ -94,16 +92,16 @@ int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does
             string tag1 = "<HomeTeam>",tag2 = "</HomeTeam>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
-            for ( i = 0; i < Tournament->GetNumberOfTeams(); i++ )
-                if ( Tournament->GetTeam(i)->GetName() == line )
-                {
-                    cout << "found team equal: " << Tournament->GetTeam(i)->GetName() << " to " << line << endl;
-                    this->HomeTeam = Tournament->GetTeam(i);
-                    cout << "Home team pointer points to: " << this->HomeTeam->GetName() << endl;
-                }
 
-            /* Insert pointer to a team !!! */
-           // this-> = line;
+            for ( i = 0; *(Team+i) != NULL; i++ )
+                if( (*(Team+i))->GetName() == line )
+                {
+                    HomeTeam = *(Team+i);
+                    #ifdef DEBUG
+                        cout << "HomeTeam in match: " << HomeTeam->GetName() << endl;
+                    #endif
+                    break;
+                }
         }
         else if( TTools::strcontain( line,"<GuestTeam>" ) )
         {
@@ -113,8 +111,15 @@ int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does
             string tag1 = "<GuestTeam>",tag2 = "</GuestTeam>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
-            /* Insert pointer to a team !!! */
-            //this->SetGuestTeam(line);
+            for ( i = 0; *(Team+i) != NULL; i++ )
+                if( (*(Team+i))->GetName() == line )
+                {
+                    GuestTeam = *(Team+i);
+                    #ifdef DEBUG
+                        cout << "GuestTeam in match: " << GuestTeam->GetName() << endl;
+                    #endif
+                    break;
+                }
         }
         else if( TTools::strcontain( line,"<Stadium>" ) )
         {
@@ -124,8 +129,15 @@ int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does
             string tag1 = "<Stadium>",tag2 = "</Stadium>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
-            /* Insert pointer to a team !!! */
-            //this->SetStadium(line);
+            for ( i = 0; *(StadiumN+i) != NULL; i++ )
+                if( (*(StadiumN+i))->GetStName() == line )
+                {
+                    Stadium = *(StadiumN+i);
+                    #ifdef DEBUG
+                        cout << "Stadium entry in match: " << Stadium->GetStName() << endl;
+                    #endif
+                    break;
+                }
         }
         else if( TTools::strcontain( line,"<Referee>" ) )
         {
@@ -135,7 +147,6 @@ int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does
             std::string tag1 = "<Referee>",tag2 = "</Referee>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
-            /* Insert pointer to a team !!! */
             this->SetReferee(line);
         }
         else if (  TTools::strcontain(line,"<PlayerTricotNr Team=\"Home\">" ) )
@@ -146,11 +157,17 @@ int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does
             std::string tag1 = "<PlayerTricotNr Team=\"Home\">",tag2 = "</PlayerTricotNr>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
-            /* add correct player to vector :) push_back */
-    //        HomePlayer.push_back()
-            #ifdef DEBUG
-                std::cout <<  atoi(line.c_str()) << std::endl;
-            #endif // DEBUG
+            /* add correct player to vector, check tricot numbers :) push_back */
+            for ( i = 0; HomeTeam->GetPlayer(i) != NULL; i++ )
+                if( HomeTeam->GetPlayer(i)->GettricotNr() == atoi(line.c_str()) )
+                {
+                    HomePlayer.push_back( HomeTeam->GetPlayer(i) );
+                    #ifdef DEBUG
+                        cout << "Added player to home team: "<< HomeTeam->GetName() << " Nr.: " << HomePlayer.at( HomePlayer.size()-1 )->GettricotNr()
+                            << " " << HomePlayer.at( HomePlayer.size()-1 )->Getname() <<  endl;
+                    #endif
+                    break;
+                }
         }
         else if (  TTools::strcontain(line,"<PlayerTricotNr Team=\"Guest\">" ) )
         {
@@ -160,13 +177,19 @@ int TMatch::load(std::ifstream &ifs, void* ptr ) // void pointer, so header does
             std::string tag1 = "<PlayerTricotNr Team=\"Guest\">",tag2 = "</PlayerTricotNr>";
             line = TTools::tagremove(line, tag1);
             line = TTools::tagremove(line, tag2);
-            /* add correct player to vector :) push_back */
-    //        HomePlayer.push_back()
-            #ifdef DEBUG
-                std::cout <<  atoi(line.c_str()) << std::endl;
-            #endif // DEBUG
+            /* add correct player to vector, check tricot numbers :) push_back */
+            for ( i = 0; GuestTeam->GetPlayer(i) != NULL; i++ )
+                if( GuestTeam->GetPlayer(i)->GettricotNr() == atoi(line.c_str()) )
+                {
+                    GuestPlayer.push_back( GuestTeam->GetPlayer(i) );
+                    #ifdef DEBUG
+                        cout << "Added player to guest team: "<< GuestTeam->GetName() << " Nr.: " << GuestPlayer.at( GuestPlayer.size()-1 )->GettricotNr()
+                            << " " << GuestPlayer.at( GuestPlayer.size()-1 )->Getname() <<  endl;
+                    #endif
+                    break;
+                }
         }
-            else if ( TTools::strcontain( line,"<Foul>" ) )
+        else if ( TTools::strcontain( line,"<Foul>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
