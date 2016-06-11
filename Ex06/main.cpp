@@ -9,7 +9,9 @@ int main()
    TTournament Bundesliga("fussball.xml");
 
     /* funkst erst nach überladen, siehe Aufgabe 6 pdf */
-   //cout << Bundesliga << endl;
+    cout << Bundesliga << endl;
+
+    //Bundesliga.print();
 
    return 0;
 }

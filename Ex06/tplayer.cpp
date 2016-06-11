@@ -47,7 +47,10 @@ TPlayer::~TPlayer()
 void TPlayer::print()
 {
     cout.setf(ios::left, ios::adjustfield);
-    cout << setw(23) << setfill(' ') << name;
+    cout << setw(23) << setfill(' ') << *this;
+    //or:
+    //operator<< (cout, *this);
+
     cout.setf(ios::right, ios::adjustfield);
     cout << " | " << setw(2) << tricotNr
          << " | " << setw(6) << NumberOfGames

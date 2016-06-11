@@ -46,6 +46,7 @@ TTournament::~TTournament()
         delete this->Stadium[i];
 }
 
+
 void TTournament::print()
 {
     int i;

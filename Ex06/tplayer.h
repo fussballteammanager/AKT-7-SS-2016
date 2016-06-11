@@ -1,15 +1,19 @@
 #ifndef TPLAYER_H
 #define TPLAYER_H TPLAYER_H
 
+#include <iostream>
+#include <fstream>
 #include <string>
 
 #include "tdate.h"
 
+using namespace std;
+
 class TPlayer
 {
     private:
-        std::string name;
-        std::string position;
+        string name;
+        string position;
         short tricotNr;
         TDate Birthday;
         unsigned int NumberOfGames;
@@ -20,15 +24,15 @@ class TPlayer
 
     public:
         TPlayer();
-        TPlayer(std::string name, std::string position, short tricotNr, unsigned int NumberOfGoals,
+        TPlayer(string name, string position, short tricotNr, unsigned int NumberOfGoals,
             unsigned int NumberOfPasses, unsigned int NumberOfGames, unsigned int NumberOfYellowCards,
             unsigned int NumberOfRedCards, unsigned int Day, unsigned int Month, unsigned int Yea);
         virtual ~TPlayer();
 
-        std::string Getname() { return name; }
-        void Setname(std::string val) { name = val; }
-        std::string Getposition() { return position; }
-        void Setposition(std::string val) { position = val; }
+        string Getname() { return name; }
+        void Setname(string val) { name = val; }
+        string Getposition() { return position; }
+        void Setposition(string val) { position = val; }
         short GettricotNr() { return tricotNr; }
         void SettricotNr(short val) { tricotNr = val; }
         TDate GetBirthday() { return Birthday; }
@@ -43,8 +47,13 @@ class TPlayer
         void SetNumberOfYellowCards(unsigned int val) { NumberOfYellowCards = val; }
         unsigned int GetNumberOfRedCards() { return NumberOfRedCards; }
         void SetNumberOfRedCards(unsigned int val) { NumberOfRedCards = val; }
-        int load(std::ifstream &ifs);
+        int load(ifstream &ifs);
         void print();
+        friend ostream& operator<<(ostream& os, TPlayer& Player)
+        {
+            os << Player.Getname();
+            return os;
+        }
     protected:
 
 };

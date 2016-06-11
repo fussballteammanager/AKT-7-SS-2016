@@ -9,11 +9,12 @@
 #define MAXSTADIUMS 12
 #define MAXMATCHES 12
 
+using namespace std;
 
 class TTournament
 {
     private:
-        std::string TName;
+        string TName;
         int NumberOfTeams;
         TTeam *Team[MAXTEAMS];
         int NumberOfMatches;
@@ -22,11 +23,11 @@ class TTournament
         TStadium *Stadium[MAXSTADIUMS];
 
     public:
-        TTournament(std::string DName);
+        TTournament(string DName);
         virtual ~TTournament();
 
-        std::string GetTName() { return TName; }
-        void SetTName(std::string val) { TName = val; }
+        string GetTName() { return TName; }
+        void SetTName(string val) { TName = val; }
 
         int GetNumberOfTeams() { return NumberOfTeams; }
         void SetNumberOfTeams(int val) { NumberOfTeams = val; }
@@ -43,8 +44,29 @@ class TTournament
         TStadium *GetStadium(int index) { return Stadium[index]; }
         void SetStadium(TStadium val, int index) { *Stadium[index] = val; }
 
-        int load(std::ifstream &ifs);
+        int load(ifstream &ifs);
         void print();
+        friend ostream& operator<<(ostream& os, TTournament& Tournament)
+        {
+            int i;
+            os << "Turnier: " << Tournament.GetTName() << endl << endl << "Stadien:" << endl;
+            for( i = 0; i < Tournament.GetNumberOfStadiums(); i++ )
+            {
+                os << "- ";
+                Tournament.GetStadium(i)->print();
+            }
+
+            os << endl << "Teams:" << endl;
+            for( i = 0; i < Tournament.GetNumberOfTeams(); i++)
+                Tournament.GetTeam(i)->print();
+
+            os << endl << "Spiele:" << endl;
+
+            /* overload << operator in Match! */
+//            for( i = 0; i < Tournament.GetNumberOfMatches(); i++)
+//                Tournament.GetMatch(i)->print();
+    return os;
+}
 
     protected:
 };
