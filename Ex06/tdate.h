@@ -1,9 +1,8 @@
-#ifndef TSCORE_H
-#define TSCORE_H TSCORE_H
-
+#ifndef TDATE_H
+#define TDATE_H TDATE_H
 
 /******************************************************
- * FUNKTION: Score class
+ * FUNKTION: Date  class
  *-----------------------------------------------------
  * BESCHREIBUNG: class definition
  * GELTUNGSBEREICH: Global
@@ -14,20 +13,25 @@
  * ÄNDERUNGEN  : -
  ******************************************************/
 
-class TScore
+
+class TDate
 {
     private:
-        short goalsHome;
-        short goalsGuest;
+        short day;
+        short month;
+        short year;
 
     public:
-        TScore();
-        TScore(short goalsHome, short goalsGuest);
-        void setGoals(short goalsHome, short goalsGuest);
-        short getGoalsHome() { return goalsHome; }
-        short getGoalsGuest() { return goalsGuest; }
-        short getPointsHome();
-        short getPointsGuest();
+        TDate();
+        TDate(short day, short month, short year);
+        ~TDate();
+
+        void setDate(short day, short month, short year);
+        void setCurrentDate();
+        short getDay();
+        short getMonth();
+        short getYear();
+        int load(std::ifstream &ifs);
         void print();
 };
 
