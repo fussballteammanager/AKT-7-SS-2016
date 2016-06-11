@@ -14,7 +14,7 @@ void TPenalty::print()
     {
         std::cout.setf(ios::right, ios::adjustfield);
         std::cout << setfill(' ') << setw(2)
-            << TEvent::GetMinuteOfPlay() <<". Spielminute: ELFMETER! Ausgeführt von "
+            << TEvent::GetMinuteOfPlay() <<". Spielminute: ELFMETER! Ausgefuehrt von "
             << TEvent::GetPlayer()->Getname() << std::endl;
     }
 }
