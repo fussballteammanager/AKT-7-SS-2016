@@ -65,10 +65,11 @@ class TTournament
             /* overload << operator in Match! */
 //            for( i = 0; i < Tournament.GetNumberOfMatches(); i++)
 //                Tournament.GetMatch(i)->print();
-    return os;
-}
+            return os;
+        }
 
     protected:
 };
 
 #endif // TTOURNAMENT_H
+
