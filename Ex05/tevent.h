@@ -3,8 +3,13 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 
 #include "tplayer.h"
+#include "tteam.h"
+#include "tscore.h"
+
+using namespace std;
 
 class TEvent
 {
@@ -16,18 +21,21 @@ class TEvent
         TEvent() : MinuteOfPlay(0), Player(0) {}
         TEvent( int Minute, TPlayer *Player) :MinuteOfPlay(Minute), Player(Player)
         {
-            std::cout << "Constr: TEvent" << std::endl;
+            cout << "Constr: TEvent" << endl;
         }
         virtual ~TEvent()
         {
-            std::cout << "Destr: TEvent" << std::endl;
+            cout << "Destr: TEvent" << endl;
         }
 
         int GetMinuteOfPlay() { return MinuteOfPlay; }
         void SetMinuteOfPlay(int val) { MinuteOfPlay = val; }
         virtual void SetPlayer( TPlayer *RefPlayer ) {  Player = RefPlayer; }
         virtual TPlayer* GetPlayer() { return Player; }
-        virtual int load(std::ifstream &ifs) { return 0; }
+        virtual int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer ) { return 0; }
+        virtual int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer,
+            TTeam* &HomeTeam, TTeam* &GuestTeam ) { return 0;}
+        virtual int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer, TScore &Score ) { return 0;}
         virtual void print() {}
 
     protected:

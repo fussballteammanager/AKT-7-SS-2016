@@ -7,6 +7,7 @@
 #include "tevent.h"
 
 
+
 class TGoal: public TEvent
 {
     private:
@@ -14,7 +15,7 @@ class TGoal: public TEvent
         bool Owngoal;
 
     public:
-        TGoal(): PassPlayer(0) {}
+        TGoal(): PassPlayer(0), Owngoal(false) {}
         TGoal( int Minute, TPlayer *GPlayer, TPlayer *PassPlayer, bool Owngoal):
             TEvent( Minute, GPlayer), PassPlayer(PassPlayer), Owngoal(Owngoal)
         {
@@ -28,7 +29,7 @@ class TGoal: public TEvent
 
         void SetPlayer( TPlayer *Player) { PassPlayer = Player; }
         TPlayer* GetPlayer() { return PassPlayer; }
-
+        int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer, TScore &Score );
         void print();
 };
 

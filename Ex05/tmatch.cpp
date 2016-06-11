@@ -1,3 +1,4 @@
+#include <iomanip>
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -6,11 +7,13 @@
 #include "ttools.h"
 #include "ttournament.h"
 
-//#include "tgoal.h"
-//#include "tpenalty.h"
-//#include "tfreekick.h"
-//#include "tsubstitution.h"
-//#include "tfoul.h"
+#include "tgoal.h"
+#include "tpenalty.h"
+#include "tfreekick.h"
+#include "tsubstitution.h"
+#include "tfoul.h"
+#include "tcard.h"
+
 
 using namespace std;
 
@@ -194,37 +197,48 @@ int TMatch::load(std::ifstream &ifs, TTeam **Team, TStadium **StadiumN )
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            //this->Events.push_back(new TFoul);
-//            this->Events.at(Events.size()-1)->load(ifs);
-            //this->Time.load(ifs);
+            this->Events.push_back(new TFoul);
+            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
         }
         else if ( TTools::strcontain( line,"<Freekick>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            //this->Time.load(ifs);
+            this->Events.push_back(new TFreeKick);
+            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
         }
         else if ( TTools::strcontain( line,"<Card>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            //this->Time.load(ifs);
+            this->Events.push_back(new TCard);
+            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
         }
         else if ( TTools::strcontain( line,"<Substitution>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            //this->Time.load(ifs);
+            this->Events.push_back(new TSubstitution);
+            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer, HomeTeam, GuestTeam);
         }
         else if ( TTools::strcontain( line,"<Penalty>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            //this->Time.load(ifs);
+            this->Events.push_back(new TPenalty);
+            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
+        }
+        else if ( TTools::strcontain( line,"<Goal>" ) )
+        {
+            #ifdef DEBUG
+                cout << line << endl;
+            #endif
+            this->Events.push_back(new TGoal);
+            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer, Score);
         }
     }
 
@@ -233,5 +247,42 @@ int TMatch::load(std::ifstream &ifs, TTeam **Team, TStadium **StadiumN )
 
 void TMatch::print()
 {
-    cout << "TMatch print" << endl;
+    unsigned int i;
+    cout << "Spiel am ";
+    Date.print();
+    cout  << " um ";
+    Time.print();
+    cout  << endl;
+    cout << "Austragungsort: ";
+    Stadium->print();
+    cout << endl;
+    cout << "Schiedsrichter: " << Referee << endl << endl;
+
+    cout << "Heimmannschaft: " << HomeTeam->GetName() << " (Trainer: " << HomeTeam->Gettrainer() << ")" << endl;
+    cout << "Gastmannschaft: " << GuestTeam->GetName() << " (Trainer: " << GuestTeam->Gettrainer() << ")" << endl << endl;
+
+    cout << "Spieleraufstellung Heimmannschaft: " << endl;
+    for( i = 0; i < HomePlayer.size(); i++ )
+    {
+        cout.setf(ios::right, ios::adjustfield);
+        cout << setw(2) << setfill(' ') << i+1 << ".: " << HomePlayer.at(i)->Getname() << endl;
+    }
+
+    cout << endl;
+    cout << "Spieleraufstellung Gastmannschaft: " << endl;
+    for( i = 0; i < GuestPlayer.size(); i++ )
+    {
+        cout << setw(2) << setfill(' ') << i+1 << ".: " << GuestPlayer.at(i)->Getname() << endl;
+    }
+
+    cout << endl;
+
+    for( i = 0; i < Events.size(); i++ )
+    {
+        Events.at(i)->print();
+    }
+
+    cout << endl << "Spielstand: ";
+    Score.print();
+    cout << endl;
 }

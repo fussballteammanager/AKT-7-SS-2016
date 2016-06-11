@@ -2,10 +2,12 @@
 #define TFOUL_H TFOUL_H
 
 #include <iostream>
+#include <vector>
 
-#include "tmatch.h"
+//#include "tplayer.h"
 #include "tevent.h"
 
+using namespace std;
 
 class TFoul: public TEvent
 {
@@ -17,16 +19,16 @@ class TFoul: public TEvent
         TFoul( int Minute, TPlayer *suspect, TPlayer *victim):
             TEvent( Minute, suspect), FouledPlayer(victim)
             {
-                std::cout << "Constr: TFoul" << std::endl;
+                cout << "Constr: TFoul" << endl;
             }
         ~TFoul()
         {
-            std::cout << "Destr: TFoul" << std::endl;
+            cout << "Destr: TFoul" << endl;
         }
 
         void SetPlayer( TPlayer *Player) { FouledPlayer = Player; }
         TPlayer* GetPlayer() { return FouledPlayer; }
-        int load(std::ifstream &ifs, TMatch* Match);
+        int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
         void print();
 };
 

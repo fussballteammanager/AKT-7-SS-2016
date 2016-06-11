@@ -48,15 +48,22 @@ TTournament::~TTournament()
 
 void TTournament::print()
 {
+    int i;
     cout << "Turnier: " << TName << endl;
 
     cout << endl << "Stadien:" << endl;
-    for( int i = 0; i < NumberOfStadiums; i++ )
+    for( i = 0; i < NumberOfStadiums; i++ )
+     {
+        cout << "- ";
         this->Stadium[i]->print();
+     }
 
     cout << endl << "Teams:" << endl;
-    for(int i = 0; i < NumberOfTeams; i++)
+    for( i = 0; i < NumberOfTeams; i++)
         this->Team[i]->print();
+    cout << endl << "Spiele:" << endl;
+    for( i = 0; i < NumberOfMatches; i++)
+        this->Matches[i]->print();
 }
 
 int TTournament::load( std::ifstream &ifs )

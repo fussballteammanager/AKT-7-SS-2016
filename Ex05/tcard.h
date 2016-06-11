@@ -29,6 +29,7 @@ class TCard: public TEvent
         bool GetYellowCard() { return yellow; }
         void SetRedCard( bool card ) { red = card; }
         bool GetRedCard() { return red; }
+        int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
         void print();
 };
 

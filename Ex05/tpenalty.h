@@ -26,6 +26,7 @@ class TPenalty: public TFreeKick
 
         void SetGoal( bool Success ) { Goal = Success; }
         bool GetGoal() { return Goal; }
+        int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
 
         void print();
 };

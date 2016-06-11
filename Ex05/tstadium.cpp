@@ -102,6 +102,6 @@ int TStadium::load(std::ifstream &ifs)
 
 void TStadium::print()
 {
-    cout << "- " << this->StName << " (" << this->NumberOfSeats << " Sitzplaetze) in " << this->Town << "; " << this->Country << endl;
+    cout << this->StName << " (" << this->NumberOfSeats << " Sitzplaetze) in " << this->Town << "; " << this->Country << endl;
 }
 
