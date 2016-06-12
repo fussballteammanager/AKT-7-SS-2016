@@ -6,12 +6,9 @@ using namespace std;
 
 int main()
 {
-   TTournament Bundesliga("fussball.xml");
+    TTournament Bundesliga("fussball.xml");
 
-    /* funkst erst nach überladen, siehe Aufgabe 6 pdf */
     cout << Bundesliga << endl;
-
-    //Bundesliga.print();
 
    return 0;
 }
