@@ -30,6 +30,22 @@ class TFoul: public TEvent
         TPlayer* GetPlayer() { return FouledPlayer; }
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
         void print();
+
+        ostream& print( ostream& ostr )
+        {
+            ostr << "was here FOUL 777777777777777777777" << endl;
+//            ostr << setfill(' ') << setw(2)
+//                << TEvent::GetMinuteOfPlay() <<". Spielminute: ";
+            ostr << TEvent::print( ostr)
+            << "end of line" << endl;
+            return ostr;
+        }
+
+//        friend ostream& operator<<(ostream& ostr, TFoul& Foul)
+//        {
+//        cout << "in Foul ***********************" << endl;
+//            return Foul.print( ostr );
+//        }
 };
 
 #endif // TFOUL_H

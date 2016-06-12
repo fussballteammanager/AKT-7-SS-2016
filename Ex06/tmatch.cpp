@@ -36,27 +36,6 @@ TMatch::~TMatch()
     #endif
 }
 
-void AddHomePlayer( TPlayer* HPlayer)
-{
-
-}
-
-void AddGuestPlayer( TPlayer* GPlayer)
-{
-
-}
-
-void SubstituteHomePlayer( TPlayer* exhaustedPlayer, TPlayer* replacementPlayer )
-{
-
-}
-
-void SubstituteGuestPlayer( TPlayer* exhaustedPlayer, TPlayer* replacementPlayer )
-{
-
-}
-
-
 int TMatch::load(std::ifstream &ifs, TTeam **Team, TStadium **StadiumN )
 {
     int i;

@@ -1,18 +1,10 @@
 #ifndef TDATE_H
 #define TDATE_H TDATE_H
 
-/******************************************************
- * FUNKTION: Date  class
- *-----------------------------------------------------
- * BESCHREIBUNG: class definition
- * GELTUNGSBEREICH: Global
- * PARAMETER: Constructor with or without parameters (default values)
- --------------------------------------------------
- * ERSTELLT VON: ts
- *           AM: 10.04.2016
- * ÄNDERUNGEN  : -
- ******************************************************/
+#include <iostream>
+#include <iomanip>
 
+using namespace std;
 
 class TDate
 {
@@ -31,8 +23,14 @@ class TDate
         short getDay();
         short getMonth();
         short getYear();
-        int load(std::ifstream &ifs);
+        int load(ifstream &ifs);
         void print();
+        friend ostream& operator<<(ostream& os, TDate& TDate)
+        {
+            return os << setw(2) << setfill('0') << TDate.getDay()
+            << "." << setw(2) << TDate.getMonth()
+            << "."<<  setw(4) << TDate.getYear();
+        }
 };
 
 #endif

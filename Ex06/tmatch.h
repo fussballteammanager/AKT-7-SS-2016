@@ -45,20 +45,69 @@ class TMatch
         TTeam *GetGuestTeam() { return GuestTeam; }
         void SetGuestTeam(TTeam *val) { GuestTeam = val; }
 
-        void AddHomePlayer( TPlayer* HPlayer);
-        void AddGuestPlayer( TPlayer* GPlayer);
+//        TPlayer *GetHomePlayer( int index ) { return HomePlayer.at(index); }
+//        TPlayer *GetGuestPlayer( int index ) { return GuestPlayer.at(index); }
+//        int GetNumberOfHomePlayer( ) { return HomePlayer.size(); }
+//        int GetNumberOfGuestPlayer( ) { return GuestPlayer.size(); }
+
+
         void AddEvent( TEvent* NewEvent ) { Events.push_back(NewEvent); }
-        void SubstituteHomePlayer( TPlayer* exhaustedPlayer, TPlayer* replacementPlayer );
-        void SubstituteGuestPlayer( TPlayer* exhaustedPlayer, TPlayer* replacementPlayer );
+
 
         TScore GetScore() { return Score; }
         void SetScore(TScore val) { Score = val; }
-        std::string GetReferee() { return Referee; }
-        void SetReferee(std::string val) { Referee = val; }
+        string GetReferee() { return Referee; }
+        void SetReferee(string val) { Referee = val; }
         TStadium *GetStadium() { return Stadium; }
         void SetStadium(TStadium *val) { Stadium = val; }
-        int load(std::ifstream &ifs, TTeam **Team, TStadium **Stadium );
+        int load(ifstream &ifs, TTeam **Team, TStadium **Stadium );
         void print();
+        friend ostream& operator<<(ostream& os, TMatch& Match)
+        {
+            unsigned int i;
+            TDate Date = Match.GetDate();
+            TTime Time = Match.GetTime();
+            TStadium *Stadium = Match.GetStadium();
+
+            os << "Spiel am " << Date << " um " << Time << endl << "Austragungsort: "
+                << *Stadium << endl << "Schiedsrichter: " << Match.GetReferee() << endl << endl
+                << "Heimmannschaft: " << Match.GetHomeTeam()->GetName()
+                << " (Trainer: " << Match.GetHomeTeam()->Gettrainer() << ")" << endl
+                << "Gastmannschaft: " << Match.GetGuestTeam()->GetName()
+                << " (Trainer: " << Match.GetGuestTeam()->Gettrainer() << ")" << endl << endl;
+
+            os << "Spieleraufstellung Heimmannschaft: " << endl;
+            for( i = 0; i < Match.HomePlayer.size(); i++ )
+            {
+                os.setf(ios::right, ios::adjustfield);
+                os << setw(2) << setfill(' ') << i+1 << ".: "
+                    << Match.HomePlayer.at(i)->Getname() << endl;
+            }
+
+            os << endl << "Spieleraufstellung Gastmannschaft: " << endl;
+            for( i = 0; i < Match.GuestPlayer.size(); i++ )
+            {
+                os << setw(2) << setfill(' ') << i+1 << ".: "
+                    << Match.GuestPlayer.at(i)->Getname() << endl;
+            }
+
+            os << endl;
+
+            for( i = 0; i < Match.Events.size(); i++ )
+            {
+                TEvent * Event = Match.Events.at(i);
+                os << *Event;
+                os << "one run finished ************" << endl;
+            }
+
+            os << endl << "Spielstand: ";
+            return os;
+#if 0
+            Score.print();
+            cout << endl;
+#endif
+
+        }
 };
 
 #endif // TMATCH_H

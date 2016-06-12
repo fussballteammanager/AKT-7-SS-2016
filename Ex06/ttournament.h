@@ -63,8 +63,8 @@ class TTournament
             os << endl << "Spiele:" << endl;
 
             /* overload << operator in Match! */
-//            for( i = 0; i < Tournament.GetNumberOfMatches(); i++)
-//                Tournament.GetMatch(i)->print();
+            for( i = 0; i < Tournament.GetNumberOfMatches(); i++)
+                cout << *Tournament.GetMatch(i);
             return os;
         }
 

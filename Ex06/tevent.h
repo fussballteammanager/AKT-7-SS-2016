@@ -38,6 +38,20 @@ class TEvent
         virtual int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer, TScore &Score ) { return 0;}
         virtual void print() {}
 
+        virtual ostream& print( ostream& ostr )
+        {
+            ostr << "was here 222222222222222222222" << endl;
+//            ostr << setfill(' ') << setw(2)
+//                << TEvent::GetMinuteOfPlay() <<". Spielminute: ";
+            return ostr;
+        }
+
+        friend ostream& operator<<(ostream& ostr, TEvent& Event)
+        {
+            cout << "was here 111111111111111111111111" << endl;
+            return Event.print( ostr );
+        }
+
     protected:
 
 };

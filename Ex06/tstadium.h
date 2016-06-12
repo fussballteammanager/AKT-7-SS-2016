@@ -1,34 +1,44 @@
 #ifndef TSTADIUM_H
 #define TSTADIUM_H TSTADIUM_H
 
+#include <iostream>
+#include <iomanip>
 #include <string>
+
+using namespace std;
 
 class TStadium
 {
     private:
-        std::string StName;
-        std::string Town;
-        std::string Country;
+        string StName;
+        string Town;
+        string Country;
         int NumberOfSeats;
         int YearOfConstruction;
 
     public:
         TStadium();
-        TStadium(std::string name, std::string town, std::string country, int seats, int year);
+        TStadium(string name, string town, string country, int seats, int year);
         ~TStadium();
 
-        std::string GetStName() { return StName; }
-        void SetStName(std::string val) { StName = val; }
-        std::string GetTown() { return Town; }
-        void SetTown(std::string val) { Town = val; }
-        std::string GetCountry() { return Country; }
-        void SetCountry(std::string val) { Country = val; }
+        string GetStName() { return StName; }
+        void SetStName(string val) { StName = val; }
+        string GetTown() { return Town; }
+        void SetTown(string val) { Town = val; }
+        string GetCountry() { return Country; }
+        void SetCountry(string val) { Country = val; }
         int GetNumberOfSeats() { return NumberOfSeats; }
         void SetNumberOfSeats(int val) { NumberOfSeats = val; }
         int GetYearOfConstruction() { return YearOfConstruction; }
         void SetYearOfConstruction(int val) { YearOfConstruction = val; }
-        int load(std::ifstream &ifs);
+        int load(ifstream &ifs);
         void print();
+        friend ostream& operator<<(ostream& os, TStadium& Stadium)
+        {
+            return os << Stadium.GetStName() << " (" << Stadium.GetNumberOfSeats()
+                << " Sitzplaetze) in " << Stadium.GetTown() << "; "
+                << Stadium.GetCountry() << endl;
+        }
 
     protected:
 };

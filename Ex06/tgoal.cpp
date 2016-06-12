@@ -15,24 +15,21 @@ void TGoal::print()
     {
         /* not an owngoal */
         cout.setf(ios::right, ios::adjustfield);
-        cout << setfill(' ') << setw(2)
-            << TEvent::GetMinuteOfPlay() <<". Spielminute: TOR!!! Torschuetze: "
+        cout << "TOR!!! Torschuetze: "
             << TEvent::GetPlayer()->Getname() << endl;
     }
     else if ( GetPlayer() == 0 && Owngoal == true )
     {
         /* owngoal */
         cout.setf(ios::right, ios::adjustfield);
-        cout << setfill(' ') << setw(2)
-            << TEvent::GetMinuteOfPlay() <<". Spielminute: EIGENTOR!!! Torschuetze: "
+        cout << "EIGENTOR!!! Torschuetze: "
             << TEvent::GetPlayer()->Getname() << endl;
     }
     else if ( GetPlayer() != 0 && Owngoal == false )
     {
         /* not an own goal, but with pass  */
         cout.setf(ios::right, ios::adjustfield);
-        cout << setfill(' ') << setw(2)
-            << TEvent::GetMinuteOfPlay() <<". Spielminute: TOR!!! Torschuetze: "
+        cout << "TOR!!! Torschuetze: "
             << TEvent::GetPlayer()->Getname() << endl;
         cout << "\t\t (Vorlage: " << PassPlayer->Getname() << " )" << endl;
     }
@@ -40,8 +37,7 @@ void TGoal::print()
     {
         /* not an own goal, but with pass  */
         cout.setf(ios::right, ios::adjustfield);
-        cout << setfill(' ') << setw(2)
-            << TEvent::GetMinuteOfPlay() <<". Spielminute: EIGENTOR!!! Torschuetze: "
+        cout << "EIGENTOR!!! Torschuetze: "
             << TEvent::GetPlayer()->Getname() << endl;
         cout << "\t\t (Vorlage: " << PassPlayer->Getname() << " )" << endl;
     }
