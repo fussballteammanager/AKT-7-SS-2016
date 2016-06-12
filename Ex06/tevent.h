@@ -40,15 +40,12 @@ class TEvent
 
         virtual ostream& print( ostream& ostr )
         {
-            ostr << "was here 222222222222222222222" << endl;
-//            ostr << setfill(' ') << setw(2)
-//                << TEvent::GetMinuteOfPlay() <<". Spielminute: ";
-            return ostr;
+            return ostr << setfill(' ') << setw(2)
+                << TEvent::GetMinuteOfPlay() <<". Spielminute: ";
         }
 
         friend ostream& operator<<(ostream& ostr, TEvent& Event)
         {
-            cout << "was here 111111111111111111111111" << endl;
             return Event.print( ostr );
         }
 

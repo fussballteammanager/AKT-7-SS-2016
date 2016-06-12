@@ -96,17 +96,15 @@ class TMatch
             for( i = 0; i < Match.Events.size(); i++ )
             {
                 TEvent * Event = Match.Events.at(i);
-                os << *Event;
-                os << "one run finished ************" << endl;
+                os << *Event << endl;
             }
 
             os << endl << "Spielstand: ";
-            return os;
-#if 0
-            Score.print();
-            cout << endl;
-#endif
 
+            TScore Score = Match.GetScore();
+            os << Score << endl;
+
+            return os;
         }
 };
 

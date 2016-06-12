@@ -25,11 +25,12 @@ class TDate
         short getYear();
         int load(ifstream &ifs);
         void print();
-        friend ostream& operator<<(ostream& os, TDate& TDate)
+
+        friend ostream& operator<<(ostream& os, TDate& Date)
         {
-            return os << setw(2) << setfill('0') << TDate.getDay()
-            << "." << setw(2) << TDate.getMonth()
-            << "."<<  setw(4) << TDate.getYear();
+            return os << setw(2) << setfill('0') << Date.getDay()
+            << "." << setw(2) << Date.getMonth()
+            << "."<<  setw(4) << Date.getYear();
         }
 };
 

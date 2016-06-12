@@ -1,18 +1,10 @@
 #ifndef TSCORE_H
 #define TSCORE_H TSCORE_H
 
+#include <iostream>
+#include <iomanip>
 
-/******************************************************
- * FUNKTION: Score class
- *-----------------------------------------------------
- * BESCHREIBUNG: class definition
- * GELTUNGSBEREICH: Global
- * PARAMETER: Constructor with or without parameters (default values)
- --------------------------------------------------
- * ERSTELLT VON: ts
- *           AM: 10.04.2016
- * ÄNDERUNGEN  : -
- ******************************************************/
+using namespace std;
 
 class TScore
 {
@@ -29,6 +21,11 @@ class TScore
         short getPointsHome();
         short getPointsGuest();
         void print();
+
+        friend ostream& operator<<(ostream& os, TScore& Score)
+        {
+            return os << Score.getGoalsHome() << ":" << Score.getGoalsGuest();
+        }
 };
 
 #endif

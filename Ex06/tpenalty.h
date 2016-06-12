@@ -29,6 +29,19 @@ class TPenalty: public TFreeKick
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
 
         void print();
+
+        ostream& print( ostream& ostr )
+        {
+            if ( TEvent::GetPlayer() == 0 )
+                ostr << "Kein Spielername vorhanden für Elfmeter!" << std::endl;
+            else
+            {
+                TEvent::print( ostr ) << "ELFMETER! Ausgefuehrt von "
+                    << TEvent::GetPlayer()->Getname();
+            }
+
+            return ostr;
+        }
 };
 
 #endif // TPENALTY_H

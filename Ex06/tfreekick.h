@@ -30,10 +30,19 @@ class TFreeKick: public TEvent
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
         virtual void print();
 
-//        friend ostream& operator<<(ostream& os, TEvent& Event)
-//        {
-//            return TEvent::print(os, Event);
-//        }
+        ostream& print( ostream& ostr )
+        {
+
+            if ( TEvent::GetPlayer() == 0 )
+                ostr << "Kein Spielereintrag für Freistoß!" << endl;
+            else
+            {
+                TEvent::print( ostr ) << "FREISTOSS (Abstand zum Tor: " << Distance << " m)!" << endl;
+                ostr <<  "\t\t Wird ausgeführt von " << TEvent::GetPlayer()->Getname();
+            }
+
+            return ostr;
+        }
 };
 
 

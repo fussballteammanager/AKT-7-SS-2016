@@ -33,11 +33,12 @@ class TFoul: public TEvent
 
         ostream& print( ostream& ostr )
         {
-            ostr << "was here FOUL 777777777777777777777" << endl;
-//            ostr << setfill(' ') << setw(2)
-//                << TEvent::GetMinuteOfPlay() <<". Spielminute: ";
-            ostr << TEvent::print( ostr)
-            << "end of line" << endl;
+            if ( GetPlayer() == 0 || TEvent::GetPlayer() == 0 )
+                ostr << "Kein Spielereintrag für Faul!" << endl;
+            else
+                TEvent::print( ostr ) << "FOUL an " << FouledPlayer->Getname() << " von "
+                    << TEvent::GetPlayer()->Getname();
+
             return ostr;
         }
 
@@ -46,6 +47,7 @@ class TFoul: public TEvent
 //        cout << "in Foul ***********************" << endl;
 //            return Foul.print( ostr );
 //        }
+
 };
 
 #endif // TFOUL_H

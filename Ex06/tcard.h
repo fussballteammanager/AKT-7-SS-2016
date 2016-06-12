@@ -35,38 +35,26 @@ class TCard: public TEvent
 
         ostream& print( ostream& ostr )
         {
-        //    return ostr << setfill(' ') << setw(2)
-        //        << TEvent::GetMinuteOfPlay() <<". Spielminute: ";
+            TEvent::print( ostr);
 
-            cout << "was her 1111 *******************" << endl;
-#if 0
             if ( TEvent::GetPlayer() == 0 )
                 ostr << "Kein Spielereintrag für gelbe oder rote Karte!" << endl;
             else
             {
-                ostr.setf(ios::right, ios::adjustfield);
                 if ( yellow == true && red == false )
-                    ostr << setfill(' ') << setw(2) << TEvent::GetMinuteOfPlay()
-                        <<". Spielminute: GELBE KARTE fuer " << TEvent::GetPlayer()->Getname() << endl;
+                    ostr << "GELBE KARTE fuer " << TEvent::GetPlayer()->Getname();
                 else if ( yellow == false && red == true )
-                    ostr << setfill(' ') << setw(2) << TEvent::GetMinuteOfPlay()
-                        <<". Spielminute: ROTE KARTE fuer " << TEvent::GetPlayer()->Getname() << endl;
+                    ostr << "ROTE KARTE fuer " << TEvent::GetPlayer()->Getname();
                 else if ( yellow == true && red == true )
-                    ostr << setfill(' ') << setw(2) << TEvent::GetMinuteOfPlay()
-                        <<". Spielminute: GLEB/ROTE KARTE fuer " << TEvent::GetPlayer()->Getname() << endl;
+                    ostr << "GELB/ROTE KARTE fuer " << TEvent::GetPlayer()->Getname();
                 else
-                    ostr << setfill(' ') << setw(2) << TEvent::GetMinuteOfPlay()
-                        <<". Spielminute: Schiedsrichter Entscheidung aufgehoben, KEINE KARTE fuer " << TEvent::GetPlayer()->Getname() << endl;
+                    ostr << "Schiedsrichter Entscheidung aufgehoben, KEINE KARTE fuer "
+                        << TEvent::GetPlayer()->Getname();
             }
-#endif
+
             return ostr;
         }
 
-//        friend ostream& operator<<(ostream& ostr, TEvent& Event )
-//        {
-//            ostr << "war auch here :) *&&&&&&&&&&&&&&&&&&&&&&&&&" << endl;
-//            return Event::print( ostr );
-//        }
 };
 
 #endif // TCARD_H

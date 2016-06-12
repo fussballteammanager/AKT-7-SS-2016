@@ -32,6 +32,19 @@ class TSubstitution: public TEvent
         TTeam* &HomeTeam, TTeam* &GuestTeam );
 
         void print();
+
+        ostream& print( ostream& ostr )
+        {
+            if ( TEvent::GetPlayer() == 0 || GetPlayer() == 0 )
+                ostr << "Kein Spielername vorhanden für Torschuss!" << endl;
+            else
+            {
+                TEvent::print( ostr ) << "WECHSEL! Fuer " << TEvent::GetPlayer()->Getname() << " kommt "
+                    << subPlayer->Getname();
+            }
+
+            return ostr;
+        }
 };
 
 #endif // TSUBSTITUTING_H

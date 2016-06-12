@@ -31,6 +31,42 @@ class TGoal: public TEvent
         TPlayer* GetPlayer() { return PassPlayer; }
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer, TScore &Score );
         void print();
+
+        ostream& print( ostream& ostr )
+        {
+            TEvent::print( ostr );
+
+            if ( TEvent::GetPlayer() == 0 )
+                ostr << "Kein Spielername vorhanden für Torschuss!" << endl;
+            else if ( GetPlayer() == 0 && Owngoal == false )
+            {
+                /* not an owngoal */
+                ostr << "TOR!!! Torschuetze: "
+                    << TEvent::GetPlayer()->Getname();
+            }
+            else if ( GetPlayer() == 0 && Owngoal == true )
+            {
+                /* owngoal */
+                ostr << "EIGENTOR!!! Torschuetze: "
+                    << TEvent::GetPlayer()->Getname();
+            }
+            else if ( GetPlayer() != 0 && Owngoal == false )
+            {
+                /* not an own goal, but with pass  */
+                ostr << "TOR!!! Torschuetze: "
+                    << TEvent::GetPlayer()->Getname() << endl;
+                ostr << "\t\t (Vorlage: " << PassPlayer->Getname() << " )";
+            }
+            else /* pass and owngoal :) */
+            {
+                /* not an own goal, but with pass  */
+                ostr << "EIGENTOR!!! Torschuetze: "
+                    << TEvent::GetPlayer()->Getname() << endl;
+                ostr << "\t\t (Vorlage: " << PassPlayer->Getname() << " )";
+            }
+
+            return ostr;
+        }
 };
 
 #endif // TGOAL_H
