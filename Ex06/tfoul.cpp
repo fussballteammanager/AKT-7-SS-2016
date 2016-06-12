@@ -6,21 +6,6 @@
 #include "tfoul.h"
 #include "ttools.h"
 
-
-void TFoul::print()
-{
-    if ( GetPlayer() == 0 || TEvent::GetPlayer() == 0 )
-        cout << "Kein Spielereintrag für Faul!" << endl;
-    else
-    {
-        cout.setf(ios::right, ios::adjustfield);
-        cout << setfill(' ') << setw(2)
-            << TEvent::GetMinuteOfPlay() <<". Spielminute: FOUL an "
-            << FouledPlayer->Getname() << " von "
-            << TEvent::GetPlayer()->Getname() << endl;
-    }
-}
-
 int TFoul::load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer )
 {
     unsigned int i;

@@ -31,8 +31,6 @@ class TSubstitution: public TEvent
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer,
         TTeam* &HomeTeam, TTeam* &GuestTeam );
 
-        void print();
-
         ostream& print( ostream& ostr )
         {
             if ( TEvent::GetPlayer() == 0 || GetPlayer() == 0 )

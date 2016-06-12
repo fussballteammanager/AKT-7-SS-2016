@@ -59,13 +59,6 @@ short TTime::getMinute()
     return TTime::minute;
 }
 
-void TTime::print()
-{
-    cout << setw(2) << setfill('0') << this->hour
-        << ":" << setw(2) << setfill('0') << this->minute;
-}
-
-
 int TTime::load(std::ifstream &ifs)
 {
     string line;

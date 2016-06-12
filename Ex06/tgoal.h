@@ -30,7 +30,6 @@ class TGoal: public TEvent
         void SetPlayer( TPlayer *Player) { PassPlayer = Player; }
         TPlayer* GetPlayer() { return PassPlayer; }
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer, TScore &Score );
-        void print();
 
         ostream& print( ostream& ostr )
         {

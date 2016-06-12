@@ -36,7 +36,6 @@ class TEvent
         virtual int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer,
             TTeam* &HomeTeam, TTeam* &GuestTeam ) { return 0;}
         virtual int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer, TScore &Score ) { return 0;}
-        virtual void print() {}
 
         virtual ostream& print( ostream& ostr )
         {

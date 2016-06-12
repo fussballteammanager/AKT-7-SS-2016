@@ -45,7 +45,7 @@ class TTournament
         void SetStadium(TStadium val, int index) { *Stadium[index] = val; }
 
         int load(ifstream &ifs);
-        void print();
+
         friend ostream& operator<<(ostream& os, TTournament& Tournament)
         {
             int i;

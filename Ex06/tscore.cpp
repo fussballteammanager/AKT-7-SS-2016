@@ -47,8 +47,4 @@ short TScore::getPointsGuest()
 {
     return calcPoints(TScore::goalsGuest, TScore::goalsHome);
 }
-
-void TScore::print()
-{
-    cout << this->goalsHome << ":" << this->goalsGuest;
 }

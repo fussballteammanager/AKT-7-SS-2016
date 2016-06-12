@@ -59,8 +59,7 @@ void TPlayer::print()
          << " | " << setw(4) << NumberOfYellowCards
          << " | " << setw(4) << NumberOfRedCards
          << " | ";
-    GetBirthday().print();
-    cout  << setfill(' ') << endl;
+    cout << Birthday << setfill(' ') << endl;
 }
 
 int TPlayer::load(std::ifstream &ifs)

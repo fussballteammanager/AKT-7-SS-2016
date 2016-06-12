@@ -9,21 +9,6 @@
 
 using namespace std;
 
-
-void TSubstitution::print()
-{
-    if ( TEvent::GetPlayer() == 0 || GetPlayer() == 0 )
-        cout << "Kein Spielername vorhanden für Torschuss!" << endl;
-    else
-    {
-        cout.setf(ios::right, ios::adjustfield);
-        cout << setfill(' ') << setw(2)
-            << TEvent::GetMinuteOfPlay() <<". Spielminute: WECHSEL! Fuer "
-            << TEvent::GetPlayer()->Getname() << " kommt "
-            << subPlayer->Getname() << endl;
-    }
-}
-
 int TSubstitution::load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer,
     TTeam* &HomeTeam, TTeam* &GuestTeam )
 {

@@ -61,7 +61,7 @@ class TMatch
         TStadium *GetStadium() { return Stadium; }
         void SetStadium(TStadium *val) { Stadium = val; }
         int load(ifstream &ifs, TTeam **Team, TStadium **Stadium );
-        void print();
+
         friend ostream& operator<<(ostream& os, TMatch& Match)
         {
             unsigned int i;

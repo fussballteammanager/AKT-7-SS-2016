@@ -67,13 +67,6 @@ short TDate::getYear()
     return TDate::year;
 }
 
-void TDate::print()
-{
-    cout << setw(2) << setfill('0') << day
-    << "." << setw(2) << month
-    << "."<<  setw(4) << year;
-}
-
 int TDate::load(std::ifstream &ifs)
 {
     string line;

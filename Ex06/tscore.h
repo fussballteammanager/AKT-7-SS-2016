@@ -20,7 +20,6 @@ class TScore
         short getGoalsGuest() { return goalsGuest; }
         short getPointsHome();
         short getPointsGuest();
-        void print();
 
         friend ostream& operator<<(ostream& os, TScore& Score)
         {

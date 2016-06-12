@@ -24,7 +24,6 @@ class TDate
         short getMonth();
         short getYear();
         int load(ifstream &ifs);
-        void print();
 
         friend ostream& operator<<(ostream& os, TDate& Date)
         {

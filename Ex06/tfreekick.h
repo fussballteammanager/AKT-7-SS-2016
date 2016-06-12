@@ -28,7 +28,6 @@ class TFreeKick: public TEvent
         void SetDistance( int Dist ) { Distance = Dist; }
         int GetDistance() { return Distance; }
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
-        virtual void print();
 
         ostream& print( ostream& ostr )
         {

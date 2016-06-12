@@ -29,7 +29,6 @@ class TFoul: public TEvent
         void SetPlayer( TPlayer *Player) { FouledPlayer = Player; }
         TPlayer* GetPlayer() { return FouledPlayer; }
         int load( ifstream &ifs, vector<TPlayer*> &HomePlayer, vector<TPlayer*> &GuestPlayer );
-        void print();
 
         ostream& print( ostream& ostr )
         {

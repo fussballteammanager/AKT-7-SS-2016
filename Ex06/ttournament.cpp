@@ -46,27 +46,6 @@ TTournament::~TTournament()
         delete this->Stadium[i];
 }
 
-
-void TTournament::print()
-{
-    int i;
-    cout << "Turnier: " << TName << endl;
-
-    cout << endl << "Stadien:" << endl;
-    for( i = 0; i < NumberOfStadiums; i++ )
-     {
-        cout << "- ";
-        this->Stadium[i]->print();
-     }
-
-    cout << endl << "Teams:" << endl;
-    for( i = 0; i < NumberOfTeams; i++)
-        this->Team[i]->print();
-    cout << endl << "Spiele:" << endl;
-    for( i = 0; i < NumberOfMatches; i++)
-        this->Matches[i]->print();
-}
-
 int TTournament::load( std::ifstream &ifs )
 {
     string line = TTools::ReadUnspaced(ifs);
