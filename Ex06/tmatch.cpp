@@ -176,48 +176,54 @@ int TMatch::load(std::ifstream &ifs, TTeam **Team, TStadium **StadiumN )
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            this->Events.push_back(new TFoul);
-            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
+            TEvent *newFoul = new TFoul;
+            newFoul->load(ifs, HomePlayer, GuestPlayer );
+            *this += newFoul;
         }
         else if ( TTools::strcontain( line,"<Freekick>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            this->Events.push_back(new TFreeKick);
-            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
+            TEvent *newFreekick = new TFreeKick;
+            newFreekick->load(ifs, HomePlayer, GuestPlayer );
+            *this += newFreekick;
         }
         else if ( TTools::strcontain( line,"<Card>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            this->Events.push_back(new TCard);
-            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
+            TEvent *newCard = new TCard;
+            newCard->load(ifs, HomePlayer, GuestPlayer );
+            *this += newCard;
         }
         else if ( TTools::strcontain( line,"<Substitution>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            this->Events.push_back(new TSubstitution);
-            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer, HomeTeam, GuestTeam);
+            TEvent *newSubstitution = new TSubstitution;
+            newSubstitution->load(ifs, HomePlayer, GuestPlayer, HomeTeam, GuestTeam);
+            *this += newSubstitution;
         }
         else if ( TTools::strcontain( line,"<Penalty>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            this->Events.push_back(new TPenalty);
-            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer );
+            TEvent *newPenalty = new TPenalty;
+            newPenalty->load(ifs, HomePlayer, GuestPlayer );
+            *this += newPenalty;
         }
         else if ( TTools::strcontain( line,"<Goal>" ) )
         {
             #ifdef DEBUG
                 cout << line << endl;
             #endif
-            this->Events.push_back(new TGoal);
-            this->Events.at( Events.size()-1 )->load(ifs, HomePlayer, GuestPlayer, Score);
+            TEvent *newGoal = new TGoal;
+            newGoal->load(ifs, HomePlayer, GuestPlayer, Score);
+            *this += newGoal;
         }
     }
 

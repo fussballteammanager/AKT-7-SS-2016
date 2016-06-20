@@ -44,15 +44,12 @@ class TMatch
         void SetHomeTeam(TTeam *val) { HomeTeam = val; }
         TTeam *GetGuestTeam() { return GuestTeam; }
         void SetGuestTeam(TTeam *val) { GuestTeam = val; }
-
-//        TPlayer *GetHomePlayer( int index ) { return HomePlayer.at(index); }
-//        TPlayer *GetGuestPlayer( int index ) { return GuestPlayer.at(index); }
-//        int GetNumberOfHomePlayer( ) { return HomePlayer.size(); }
-//        int GetNumberOfGuestPlayer( ) { return GuestPlayer.size(); }
-
-
         void AddEvent( TEvent* NewEvent ) { Events.push_back(NewEvent); }
-
+        TMatch operator+= (TEvent* NewEvent)
+        {
+            Events.push_back(NewEvent);
+            return *this;
+        }
 
         TScore GetScore() { return Score; }
         void SetScore(TScore val) { Score = val; }

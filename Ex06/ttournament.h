@@ -55,14 +55,11 @@ class TTournament
                 os << "- ";
                 Tournament.GetStadium(i)->print();
             }
-
             os << endl << "Teams:" << endl;
             for( i = 0; i < Tournament.GetNumberOfTeams(); i++)
                 Tournament.GetTeam(i)->print();
 
             os << endl << "Spiele:" << endl;
-
-            /* overload << operator in Match! */
             for( i = 0; i < Tournament.GetNumberOfMatches(); i++)
                 cout << *Tournament.GetMatch(i);
             return os;

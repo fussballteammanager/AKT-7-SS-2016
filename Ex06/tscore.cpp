@@ -47,4 +47,4 @@ short TScore::getPointsGuest()
 {
     return calcPoints(TScore::goalsGuest, TScore::goalsHome);
 }
-}
+

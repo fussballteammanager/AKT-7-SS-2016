@@ -47,7 +47,6 @@ class TEvent
         {
             return Event.print( ostr );
         }
-
     protected:
 
 };
