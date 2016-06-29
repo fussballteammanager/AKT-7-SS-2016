@@ -37,7 +37,7 @@ class TFreeKick: public TEvent
             else
             {
                 TEvent::print( ostr ) << "FREISTOSS (Abstand zum Tor: " << Distance << " m)!" << endl;
-                ostr <<  "\t\t Wird ausgefuehrt von " << TEvent::GetPlayer()->Getname();
+                ostr <<  "\t\t Wird ausgeführt von " << TEvent::GetPlayer()->Getname();
             }
 
             return ostr;

@@ -1,0 +1,584 @@
+<Tournament>
+ <Name>1. Bundesliga</Name>
+ <Team>
+  <Name>Hertha BSC</Name>
+  <Player>
+   <Name>Rune Jarstein</Name>
+   <Position>Torwart</Position>
+   <TricotNr>22</TricotNr>
+   <NumberOfGames>28</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Birthday>
+    <Day>29</Day>
+    <Month>9</Month>
+    <Year>1984</Year>
+   </Birthday>
+  </Player>
+  <Trainer>Pal Dardai</Trainer>
+  <Player>
+   <Name>Thomas Kraft</Name>
+   <TricotNr>1</TricotNr>
+   <NumberOfGames>6</NumberOfGames>
+   <Position>Torwart</Position>
+   <Birthday>
+    <Day>22</Day>
+    <Month>7</Month>
+    <Year>1988</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Marvin Plattenhardt</Name>
+   <TricotNr>21</TricotNr>
+   <NumberOfGames>32</NumberOfGames>
+   <Position>Abwehr</Position>
+   <NumberOfYellowCards>5</NumberOfYellowCards>
+   <Birthday>
+    <Day>26</Day>
+    <Month>1</Month>
+    <Year>1992</Year>
+   </Birthday>
+   <NumberOfGoals>2</NumberOfGoals>
+   <NumberOfPasses>5</NumberOfPasses>
+  </Player>
+  <Player>
+   <Name>Mitchell-Elijah Weiser</Name>
+   <TricotNr>20</TricotNr>
+   <Position>Abwehr</Position>
+   <NumberOfGames>28</NumberOfGames>
+   <NumberOfGoals>2</NumberOfGoals>
+   <NumberOfPasses>4</NumberOfPasses>
+   <NumberOfYellowCards>6</NumberOfYellowCards>
+   <Birthday>
+    <Day>21</Day>
+    <Month>4</Month>
+    <Year>1994</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>John Brooks</Name>
+   <TricotNr>25</TricotNr>
+   <Position>Abwehr</Position>
+   <NumberOfGames>22</NumberOfGames>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfPasses>1</NumberOfPasses>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+   <Birthday>
+    <Day>28</Day>
+    <Month>1</Month>
+    <Year>1993</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Sebastian Langkamp</Name>
+   <TricotNr>15</TricotNr>
+   <Position>Abwehr</Position>
+   <NumberOfGames>21</NumberOfGames>
+   <NumberOfYellowCards>8</NumberOfYellowCards>
+   <NumberOfPasses>1</NumberOfPasses>
+   <Birthday>
+    <Day>15</Day>
+    <Month>1</Month>
+    <Year>1988</Year>
+   </Birthday>
+   <NumberOfGoals>1</NumberOfGoals>
+  </Player>
+  <Player>
+   <Name>Niklas Stark</Name>
+   <TricotNr>5</TricotNr>
+   <Position>Abwehr</Position>
+   <NumberOfGames>20</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Birthday>
+    <Day>14</Day>
+    <Month>4</Month>
+    <Year>1995</Year>
+   </Birthday>
+   <NumberOfGoals>2</NumberOfGoals>
+  </Player>
+  <Player>
+   <Name>Per Skjelbred</Name>
+   <NumberOfPasses>2</NumberOfPasses>
+   <TricotNr>3</TricotNr>
+   <Position>Mittelfeld</Position>
+   <NumberOfGames>31</NumberOfGames>
+   <NumberOfYellowCards>9</NumberOfYellowCards>
+   <Birthday>
+    <Day>16</Day>
+    <Month>6</Month>
+    <Year>1987</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Genki Haraguchi</Name>
+   <TricotNr>24</TricotNr>
+   <Position>Mittelfeld</Position>
+   <NumberOfGames>31</NumberOfGames>
+   <NumberOfPasses>2</NumberOfPasses>
+   <NumberOfGoals>4</NumberOfGoals>
+   <NumberOfYellowCards>4</NumberOfYellowCards>
+   <Birthday>
+    <Day>9</Day>
+    <Month>5</Month>
+    <Year>1991</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Vladimir Darida</Name>
+   <TricotNr>6</TricotNr>
+   <Position>Mittelfeld</Position>
+   <NumberOfGoals>5</NumberOfGoals>
+   <NumberOfPasses>3</NumberOfPasses>
+   <NumberOfGames>30</NumberOfGames>
+   <NumberOfYellowCards>6</NumberOfYellowCards>
+   <Birthday>
+    <Day>8</Day>
+    <Month>8</Month>
+    <Year>1990</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Fabian Lustenberger</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>28</TricotNr>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfGames>29</NumberOfGames>
+   <NumberOfYellowCards>4</NumberOfYellowCards>
+   <Birthday>
+    <Day>2</Day>
+    <Month>5</Month>
+    <Year>1988</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Alexander Baumjohann</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>9</TricotNr>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfGames>24</NumberOfGames>
+   <NumberOfPasses>2</NumberOfPasses>
+   <Birthday>
+    <Day>23</Day>
+    <Month>1</Month>
+    <Year>1987</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Valentin Stocker</Name>
+   <TricotNr>14</TricotNr>
+   <NumberOfGames>21</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Birthday>
+    <Day>12</Day>
+    <Month>4</Month>
+    <Year>1989</Year>
+   </Birthday>
+   <Position>Mittelfeld</Position>
+   <NumberOfGoals>1</NumberOfGoals>
+  </Player>
+  <Player>
+   <NumberOfGoals>14</NumberOfGoals>
+   <Name>Salomon Kalou</Name>
+   <TricotNr>11</TricotNr>
+   <NumberOfGames>31</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Position>Angriff</Position>
+   <Birthday>
+    <Day>5</Day>
+    <Month>8</Month>
+    <Year>1985</Year>
+   </Birthday>
+   <NumberOfPasses>2</NumberOfPasses>
+  </Player>
+  <Player>
+   <Position>Angriff</Position>
+   <NumberOfGoals>10</NumberOfGoals>
+   <NumberOfPasses>3</NumberOfPasses>
+   <Name>Vedad Ibisevic</Name>
+   <TricotNr>19</TricotNr>
+   <NumberOfGames>26</NumberOfGames>
+   <NumberOfYellowCards>5</NumberOfYellowCards>
+   <Birthday>
+    <Day>6</Day>
+    <Month>8</Month>
+    <Year>1984</Year>
+   </Birthday>
+   <NumberOfRedCards>1</NumberOfRedCards>
+  </Player>
+ </Team>
+ <Stadium>
+  <Name>Olympiastadion</Name>
+  <NumberOfSeats>74475</NumberOfSeats>
+  <Town>Berlin</Town>
+  <Country>Deutschland</Country>
+  <YearOfConstruction>1934</YearOfConstruction>
+ </Stadium>
+ <Stadium>
+  <Name>Allianz Arena</Name>
+  <NumberOfSeats>75000</NumberOfSeats>
+  <Town>Muenchen</Town>
+  <Country>Deutschland</Country>
+  <YearOfConstruction>2002</YearOfConstruction>
+ </Stadium>
+ <Team>
+  <Trainer>Josep Guardiola</Trainer>
+  <Name>FC Bayern Muenchen</Name>
+  <Player>
+   <Name>Manuel Neuer</Name>
+   <Position>Torwart</Position>
+   <TricotNr>1</TricotNr>
+   <NumberOfGames>33</NumberOfGames>
+   <Birthday>
+    <Day>27</Day>
+    <Month>3</Month>
+    <Year>1986</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>David Alaba</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>27</TricotNr>
+   <NumberOfGames>29</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Birthday>
+    <Day>24</Day>
+    <Month>6</Month>
+    <Year>1992</Year>
+   </Birthday>
+   <NumberOfGoals>2</NumberOfGoals>
+   <NumberOfPasses>1</NumberOfPasses>
+  </Player>
+  <Player>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+   <Name>Philipp Lahm</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>21</TricotNr>
+   <NumberOfGames>25</NumberOfGames>
+   <Birthday>
+    <Day>11</Day>
+    <Month>11</Month>
+    <Year>1983</Year>
+   </Birthday>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfPasses>1</NumberOfPasses>
+  </Player>
+  <Player>
+   <Name>Rafinha</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>13</TricotNr>
+   <NumberOfGames>24</NumberOfGames>
+   <NumberOfYellowCards>7</NumberOfYellowCards>
+   <Birthday>
+    <Day>7</Day>
+    <Month>9</Month>
+    <Year>1985</Year>
+   </Birthday>
+   <NumberOfPasses>3</NumberOfPasses>
+  </Player>
+  <Player>
+   <Name>Joshua Kimmich</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>32</TricotNr>
+   <NumberOfGames>23</NumberOfGames>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+   <Birthday>
+    <Day>8</Day>
+    <Month>2</Month>
+    <Year>1995</Year>
+   </Birthday>
+   <NumberOfPasses>2</NumberOfPasses>
+  </Player>
+  <Player>
+   <Name>Jerome Boateng</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>17</TricotNr>
+   <NumberOfGames>18</NumberOfGames>
+   <NumberOfYellowRedCards>1</NumberOfYellowRedCards>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+   <Birthday>
+    <Day>3</Day>
+    <Month>9</Month>
+    <Year>1988</Year>
+   </Birthday>
+   <NumberOfPasses>3</NumberOfPasses>
+  </Player>
+  <Player>
+   <Name>Javier Martinez</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>8</TricotNr>
+   <NumberOfGames>16</NumberOfGames>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Birthday>
+    <Day>2</Day>
+    <Month>9</Month>
+    <Year>1988</Year>
+   </Birthday>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfPasses>1</NumberOfPasses>
+  </Player>
+  <Player>
+   <Name>Juan Bernat</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>18</TricotNr>
+   <NumberOfGames>16</NumberOfGames>
+   <Birthday>
+    <Day>1</Day>
+    <Month>3</Month>
+    <Year>1993</Year>
+   </Birthday>
+   <NumberOfPasses>1</NumberOfPasses>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+  </Player>
+  <Player>
+   <Name>Mehdi Benatia</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>5</TricotNr>
+   <NumberOfGames>13</NumberOfGames>
+   <NumberOfGoals>1</NumberOfGoals>
+   <Birthday>
+    <Day>17</Day>
+    <Month>4</Month>
+    <Year>1987</Year>
+   </Birthday>
+   <NumberOfPasses>2</NumberOfPasses>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+  </Player>
+  <Player>
+   <Name>Holger Badstuber</Name>
+   <Position>Abwehr</Position>
+   <TricotNr>28</TricotNr>
+   <NumberOfGames>7</NumberOfGames>
+   <Birthday>
+    <Day>13</Day>
+    <Month>3</Month>
+    <Year>1989</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Arturo Vidal</Name>
+   <Position>Mittelfeld</Position>
+   <NumberOfGoals>4</NumberOfGoals>
+   <NumberOfPasses>6</NumberOfPasses>
+   <TricotNr>23</TricotNr>
+   <NumberOfGames>29</NumberOfGames>
+   <Birthday>
+    <Day>22</Day>
+    <Month>5</Month>
+    <Year>1987</Year>
+   </Birthday>
+   <NumberOfYellowCards>3</NumberOfYellowCards>
+  </Player>
+  <Player>
+   <Name>Douglas Costa</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>11</TricotNr>
+   <NumberOfGames>27</NumberOfGames>
+   <NumberOfGoals>4</NumberOfGoals>
+   <NumberOfPasses>12</NumberOfPasses>
+   <NumberOfYellowCards>1</NumberOfYellowCards>
+   <Birthday>
+    <Day>14</Day>
+    <Month>9</Month>
+    <Year>1990</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Thiago</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>6</TricotNr>
+   <NumberOfGames>26</NumberOfGames>
+   <NumberOfGoals>2</NumberOfGoals>
+   <NumberOfPasses>4</NumberOfPasses>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+   <Birthday>
+    <Day>11</Day>
+    <Month>4</Month>
+    <Year>1991</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Xabi Alonso</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>14</TricotNr>
+   <NumberOfYellowRedCards>1</NumberOfYellowRedCards>
+   <NumberOfGames>26</NumberOfGames>
+   <NumberOfPasses>2</NumberOfPasses>
+   <NumberOfYellowCards>5</NumberOfYellowCards>
+   <Birthday>
+    <Day>25</Day>
+    <Month>11</Month>
+    <Year>1981</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Arjen Robben</Name>
+   <Position>Mittelfeld</Position>
+   <TricotNr>10</TricotNr>
+   <NumberOfGames>15</NumberOfGames>
+   <NumberOfPasses>1</NumberOfPasses>
+   <Birthday>
+    <Day>23</Day>
+    <Month>1</Month>
+    <Year>1984</Year>
+   </Birthday>
+   <NumberOfGoals>4</NumberOfGoals>
+   <NumberOfYellowCards>1</NumberOfYellowCards>
+  </Player>
+  <Player>
+   <Name>Sebastian Rode</Name>
+   <Position>Mittelfeld</Position>
+   <NumberOfGoals>1</NumberOfGoals>
+   <NumberOfPasses>1</NumberOfPasses>
+   <TricotNr>20</TricotNr>
+   <NumberOfGames>14</NumberOfGames>
+   <Birthday>
+    <Day>11</Day>
+    <Month>10</Month>
+    <Year>1990</Year>
+   </Birthday>
+   <NumberOfYellowCards>1</NumberOfYellowCards>
+  </Player>
+  <Player>
+   <Name>Franck Ribery</Name>
+   <NumberOfGoals>2</NumberOfGoals>
+   <Position>Mittelfeld</Position>
+   <TricotNr>7</TricotNr>
+   <NumberOfGames>12</NumberOfGames>
+   <Birthday>
+    <Day>7</Day>
+    <Month>4</Month>
+    <Year>1983</Year>
+   </Birthday>
+   <NumberOfPasses>5</NumberOfPasses>
+   <NumberOfYellowCards>1</NumberOfYellowCards>
+  </Player>
+  <Player>
+   <Name>Robert Lewandowski</Name>
+   <Position>Angriff</Position>
+   <TricotNr>9</TricotNr>
+   <NumberOfGames>31</NumberOfGames>
+   <NumberOfGoals>29</NumberOfGoals>
+   <NumberOfPasses>3</NumberOfPasses>
+   <Birthday>
+    <Day>21</Day>
+    <Month>8</Month>
+    <Year>1988</Year>
+   </Birthday>
+   <NumberOfYellowCards>2</NumberOfYellowCards>
+  </Player>
+  <Player>
+   <Name>Thomas Mueller</Name>
+   <Position>Angriff</Position>
+   <TricotNr>25</TricotNr>
+   <NumberOfGames>31</NumberOfGames>
+   <NumberOfGoals>20</NumberOfGoals>
+   <NumberOfPasses>7</NumberOfPasses>
+   <NumberOfYellowCards>4</NumberOfYellowCards>
+   <Birthday>
+    <Day>13</Day>
+    <Month>9</Month>
+    <Year>1989</Year>
+   </Birthday>
+  </Player>
+  <Player>
+   <Name>Kingsley Coman</Name>
+   <Position>Angriff</Position>
+   <TricotNr>29</TricotNr>
+   <NumberOfGames>22</NumberOfGames>
+   <NumberOfGoals>4</NumberOfGoals>
+   <NumberOfPasses>5</NumberOfPasses>
+   <Birthday>
+    <Day>13</Day>
+    <Month>6</Month>
+    <Year>1996</Year>
+   </Birthday>
+  </Player>
+ </Team>
+ <Match>
+  <Date>
+   <Day>23</Day>
+   <Month>4</Month>
+   <Year>2016</Year>
+  </Date>
+  <Time>
+   <Hour>20</Hour>
+   <Minute>15</Minute>
+  </Time>
+  <HomeTeam>Hertha BSC</HomeTeam>
+  <GuestTeam>FC Bayern Muenchen</GuestTeam>
+  <Stadium>Olympiastadion</Stadium>
+  <Referee>Juergen Klinsmann</Referee>
+  <PlayerTricotNr Team="Home">1</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">21</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">20</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">25</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">15</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">5</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">3</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">6</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">9</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">11</PlayerTricotNr>
+  <PlayerTricotNr Team="Home">19</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">1</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">21</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">17</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">28</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">6</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">14</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">10</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">7</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">9</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">25</PlayerTricotNr>
+  <PlayerTricotNr Team="Guest">29</PlayerTricotNr>
+  <Foul>
+   <MinuteOfPlay>7</MinuteOfPlay>
+   <PlayerTricotNr Team="Home">15</PlayerTricotNr>
+   <FouledPlayerTricotNr Team="Guest">28</FouledPlayerTricotNr>
+  </Foul>
+  <Freekick>
+   <MinuteOfPlay>7</MinuteOfPlay>
+   <PlayerTricotNr Team="Guest">28</PlayerTricotNr>
+   <Distance>26</Distance>
+  </Freekick>
+  <Freekick>
+   <MinuteOfPlay>25</MinuteOfPlay>
+   <PlayerTricotNr Team="Home">3</PlayerTricotNr>
+   <Distance>17</Distance>
+  </Freekick>
+  <Card>
+   <MinuteOfPlay>41</MinuteOfPlay>
+   <PlayerTricotNr Team="Guest">14</PlayerTricotNr>
+   <Yellow>true</Yellow>
+   <Red>false</Red>
+  </Card>
+  <Substitution>
+   <MinuteOfPlay>41</MinuteOfPlay>
+   <PlayerTricotNr Team="Home">15</PlayerTricotNr>
+   <NewPlayerTricotNr Team="Home">28</NewPlayerTricotNr>
+  </Substitution>
+  <Foul>
+   <MinuteOfPlay>64</MinuteOfPlay>
+   <PlayerTricotNr Team="Guest">10</PlayerTricotNr>
+   <FouledPlayerTricotNr Team="Home">28</FouledPlayerTricotNr>
+  </Foul>
+  <Penalty>
+   <MinuteOfPlay>64</MinuteOfPlay>
+   <PlayerTricotNr Team="Home">11</PlayerTricotNr>
+   <Goal>true</Goal>
+  </Penalty>
+  <Goal>
+   <MinuteOfPlay>64</MinuteOfPlay>
+   <PlayerTricotNr Team="Home">11</PlayerTricotNr>
+   <OwnGoal>false</OwnGoal>
+  </Goal>
+  <Goal>
+   <MinuteOfPlay>78</MinuteOfPlay>
+   <PlayerTricotNr Team="Guest">17</PlayerTricotNr>
+   <OwnGoal>true</OwnGoal>
+  </Goal>
+  <Goal>
+   <MinuteOfPlay>85</MinuteOfPlay>
+   <PlayerTricotNr Team="Home">19</PlayerTricotNr>
+   <PassPlayerTricotNr Team="Home">6</PassPlayerTricotNr>
+  </Goal>
+ </Match>
+</Tournament>

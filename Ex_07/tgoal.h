@@ -54,7 +54,7 @@ class TGoal: public TEvent
                 /* not an own goal, but with pass  */
                 ostr << "TOR!!! Torschuetze: "
                     << TEvent::GetPlayer()->Getname() << endl;
-                ostr << "\t\t (Vorlage: " << PassPlayer->Getname() << ")";
+                ostr << "\t\t (Vorlage: " << PassPlayer->Getname() << " )";
             }
             else /* pass and owngoal :) */
             {
